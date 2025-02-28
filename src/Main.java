@@ -19,7 +19,7 @@ public class Main implements Menu {
     public static void main(String[] args) throws Exception {
 
         // UNCOMMENT TO PERFORM INITIALIZATION WITH SOME DATA PRELOADED (FOR TESTING)
-        new TestData().load();
+        //new TestData().load();
 
         session.getToMenu();
 
