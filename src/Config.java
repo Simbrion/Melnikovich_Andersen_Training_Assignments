@@ -15,4 +15,5 @@ public class Config {
     public static final String NO_EXISTING_RESERVATIONS = (YELLOW_COLOUR + "There are no existing reservations." + RESET_COLOUR);
     public static final String NO_EXISTING_CUSTOMERS = (YELLOW_COLOUR + "There are no existing customers." + RESET_COLOUR);
     public static final String WRONG_INPUT_EXCEPTION = (RED_COLOUR + "!!! Input Exception caught !!!" + RESET_COLOUR);
+    public static final String EMPTY_INPUT = (RED_COLOUR + "Empty input not allowed. Please use letters and/or digits." + RESET_COLOUR);
 }

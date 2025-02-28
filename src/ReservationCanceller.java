@@ -33,10 +33,12 @@ public class ReservationCanceller {
                 reservationDeleted = true;
                 customer.getToMenu();
             }
-            if (!reservationDeleted)
-                System.out.println(Config.RED_COLOUR + "Can't find your reservation ith such ID." + Config.RESET_COLOUR);
+        }
+        if (!reservationDeleted) {
+            System.out.println(Config.RED_COLOUR + "Can't find your reservation ith such ID." + Config.RESET_COLOUR);
             customer.getToMenu();
         }
     }
-
 }
+
+

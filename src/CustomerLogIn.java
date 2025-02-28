@@ -19,8 +19,14 @@ public class CustomerLogIn {
             }
         }
 
+        boolean inputIsValid = Main.inputValidator.isCharsOrDigits(userInput);
+        if (!inputIsValid) {
+            System.out.println(Config.EMPTY_INPUT);
+            logIn();
+        }
+
         //New customer login
-        if (!customerAlreadyExists) {
+        if (!customerAlreadyExists && inputIsValid) {
             Customer newCustomer = new Customer();
             newCustomer.setName(userInput);
             Main.customersList.add(newCustomer);
