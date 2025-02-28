@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class Space {
+public class Space implements Describable {
 
     private TypeOfSpace typeOfSpace;
     private String name;
@@ -21,8 +21,8 @@ public class Space {
 
     public void initialize(String nameOfNewSpace) throws IOException {
         this.setName(nameOfNewSpace);
-        new SpaceTypeSelector().selectType(this);
-        new SpacePriceSelector().selectPrice(this);
+        Main.spaceTypeSelector.selectType(this);
+        Main.spacePriceSelector.selectPrice(this);
     }
 
     public void setPrice(int price) {

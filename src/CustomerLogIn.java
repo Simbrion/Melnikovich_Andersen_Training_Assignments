@@ -19,7 +19,7 @@ public class CustomerLogIn {
             }
         }
 
-        boolean inputIsValid = Main.inputValidator.isCharsOrDigits(userInput);
+        boolean inputIsValid = Main.inputValidator.validate(Main.charsOrDigitsInputValidator, userInput);
         if (!inputIsValid) {
             System.out.println(Config.EMPTY_INPUT);
             logIn();

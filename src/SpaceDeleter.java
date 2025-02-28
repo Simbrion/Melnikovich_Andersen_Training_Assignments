@@ -8,7 +8,7 @@ public class SpaceDeleter {
         else {
             System.out.println("Please provide a name of the space to be deleted." +
                             "\nExisting reservations related to the space (if any) will be deleted as well.");
-            new SpaceListViewer().printList();
+            Main.spaceListViewer.printList();
             String userInput = Main.reader.readLine();
             deleteSpaceReservations(userInput);
             if (!deleteSpace(userInput)) System.out.println(Config.NO_SPACE_WITH_NAME);

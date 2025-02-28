@@ -14,7 +14,7 @@ public class ReservationsListViewer implements ListViewer {
     }
 
     public void printCustomerReservationsList(String customerName) {
-        if (Main.reservationsList.isEmpty()) System.out.println(Config.YELLOW_COLOUR + "You do not have any reservations." + Config.RESET_COLOUR);
+        if (Main.reservationsList.isEmpty()) System.out.println(Config.YELLOW_COLOUR + "There are no reservations for name " + customerName + "." + Config.RESET_COLOUR);
         else {
             System.out.println(Config.YELLOW_COLOUR + "You have the following reservations:" + Config.RESET_COLOUR);
             int numberOfUserReservations = 0;

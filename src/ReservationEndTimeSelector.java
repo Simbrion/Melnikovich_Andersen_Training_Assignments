@@ -9,7 +9,7 @@ public class ReservationEndTimeSelector {
         while (true) {
             System.out.println("Please insert the end time of the reservation in HH:mm format.");
             String userInput = Main.reader.readLine();
-            if (Main.inputValidator.isTime(userInput)) {
+            if (Main.inputValidator.validate(Main.timeInputValidator, userInput)) {
                 try {
                     if (endTimeBeforeStart(newReservation, userInput) || timeSlotOverlaps(newReservation, userInput)) continue;
                     newReservation.setEndTime(LocalTime.parse(userInput));
@@ -32,7 +32,7 @@ public class ReservationEndTimeSelector {
 
     private boolean timeSlotOverlaps(Reservation newReservation, String userInput) {
         LocalDateTime endOfNewReservation = LocalDateTime.of(newReservation.getDate(), LocalTime.parse(userInput));
-        if (new TimeOverlapChecker().endTimeOverlaps(endOfNewReservation, newReservation)) {
+        if (Main.timeOverlapChecker.endTimeOverlaps(endOfNewReservation, newReservation)) {
             System.out.println(Config.RED_COLOUR + "The reservation slot overlaps with the existing reservation. Please choose different end time." + Config.RESET_COLOUR);
             return true;
         }

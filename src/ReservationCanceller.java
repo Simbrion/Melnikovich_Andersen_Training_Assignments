@@ -11,9 +11,9 @@ public class ReservationCanceller {
 
         try {
             System.out.println("Please indicate ID of the reservation to be cancelled.");
-            new ReservationsListViewer().printCustomerReservationsList(customer.getName());
+            Main.reservationListViewer.printCustomerReservationsList(customer.getName());
             String userInput = Main.reader.readLine();
-            if (Main.inputValidator.isPositiveInt(userInput)) {
+            if (Main.inputValidator.validate(Main.positiveDigitValidator, userInput)) {
                 checkAndDelete(userInput, customer);
             } else {
                 System.out.println(Config.WRONG_INPUT_MESSAGE);

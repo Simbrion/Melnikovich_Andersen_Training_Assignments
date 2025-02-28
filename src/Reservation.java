@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Reservation {
+public class Reservation implements Describable {
     private int id;
     private Space space;
     private String customerName;

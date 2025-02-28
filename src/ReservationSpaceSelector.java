@@ -6,11 +6,6 @@ public class ReservationSpaceSelector {
 
         while (true) {
 
-            if (Main.spacesList.isEmpty()) {
-                System.out.println(Config.NO_EXISTING_SPACES);
-                break;
-            }
-
             boolean spaceNameIsOnTheList = false;
             System.out.println("Please insert the name of the space to be reserved.");
             new SpaceListViewer().printList();

@@ -7,7 +7,7 @@ public class SpacePriceModifier {
                     ". Insert \"N\" if you do not want to change the price.");
         String userInput = Main.reader.readLine();
         try {
-            if (Main.inputValidator.isPositiveInt(userInput)) space.setPrice(Integer.parseInt(userInput));
+            if (Main.inputValidator.validate(Main.positiveDigitValidator, userInput)) space.setPrice(Integer.parseInt(userInput));
             else if (userInput.equalsIgnoreCase("n"));
             else {
                 System.out.println(Config.WRONG_INPUT_MESSAGE);

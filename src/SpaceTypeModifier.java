@@ -12,7 +12,7 @@ public class SpaceTypeModifier {
                                """);
             String userInput = Main.reader.readLine();
             if (userInput.equals("1")) {
-                new SpaceTypeSelector().selectType(space);
+                Main.spaceTypeSelector.selectType(space);
                 break;
             }
             else if (userInput.equals("2")) {

@@ -20,11 +20,11 @@ public class Admin implements Menu {
         String userInput = Main.reader.readLine();
         switch (userInput) {
             case "1":
-                new SpaceCreator().start();
+                Main.spaceCreator.start();
                 this.getToMenu();
                 break;
             case "2":
-                new SpaceDeleter().start();
+                Main.spaceDeleter.start();
                 this.getToMenu();
                 break;
             case "3":
@@ -34,22 +34,20 @@ public class Admin implements Menu {
                     break;
                 }
                 else {
-                    SpaceModifier spaceModifier = new SpaceModifier();
-                    spaceModifier.start();
+                    Main.spaceModifier.start();
                     this.getToMenu();
                     break;
                 }
             case "4":
-                SpaceListViewer spaceViewer = new SpaceListViewer();
-                spaceViewer.printList();
+                Main.spaceListViewer.printList();
                 this.getToMenu();
                 break;
             case "5":
-                new ReservationsListViewer().printList();
+                Main.reservationListViewer.printList();
                 this.getToMenu();
                 break;
             case "6":
-                new CustomerListViewer().printList();
+                Main.customerListViewer.printList();
                 this.getToMenu();
                 break;
             case "7":

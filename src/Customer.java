@@ -24,29 +24,22 @@ public class Customer implements Menu {
         String userInput = Main.reader.readLine();
         switch (userInput) {
             case "1" :{
-                new SpaceListViewer().printList();
+                Main.spaceListViewer.printList();
                 this.getToMenu();
                 break;
             }
             case "2" : {
-                if (Main.spacesList.isEmpty()) {
-                    System.out.println(Config.NO_EXISTING_SPACES);
+                    Main.reservationCreator.createReservation(this.getName());
                     this.getToMenu();
                     break;
-                }
-                else {
-                    new ReservationCreator().createReservation(this.getName());
-                    this.getToMenu();
-                    break;
-                }
             }
             case "3" : {
-                new ReservationsListViewer().printCustomerReservationsList(this.getName());
+                Main.reservationListViewer.printCustomerReservationsList(this.getName());
                 this.getToMenu();
                 break;
             }
             case "4" : {
-                new ReservationCanceller().cancelReservation(this);
+                Main.reservationCanceller.cancelReservation(this);
                 this.getToMenu();
                 break;
             }

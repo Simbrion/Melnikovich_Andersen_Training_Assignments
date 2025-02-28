@@ -6,7 +6,7 @@ public class SpacePriceSelector {
         System.out.println("Please indicate the price of the space " + space.getName() + " (USD per hour).");
         String userInput = Main.reader.readLine();
         try {
-            if (Main.inputValidator.isPositiveInt(userInput)) {
+            if (Main.inputValidator.validate(Main.positiveDigitValidator, userInput)) {
                 space.setPrice(Integer.parseInt(userInput));
             }
             else {

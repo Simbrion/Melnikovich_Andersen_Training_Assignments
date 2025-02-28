@@ -8,7 +8,7 @@ public class SpaceCreator {
         System.out.println("Please provide a name for the new space.");
         String userInput = Main.reader.readLine();
 
-        boolean inputIsValid = Main.inputValidator.isCharsOrDigits(userInput);
+        boolean inputIsValid = Main.inputValidator.validate(Main.charsOrDigitsInputValidator, userInput);
 
         if (inputIsValid) {
             System.out.println(Config.EMPTY_INPUT);
