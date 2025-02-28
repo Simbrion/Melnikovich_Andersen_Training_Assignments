@@ -10,9 +10,9 @@ public class SpaceTypeModifier {
                                  1. Yes
                                  2. No
                                """);
-            String userInput = Main.reader.readLine();
+            String userInput = Main.READER.readLine();
             if (userInput.equals("1")) {
-                Main.spaceTypeSelector.selectType(space);
+                Main.SPACE_TYPE_SELECTOR.selectType(space);
                 break;
             }
             else if (userInput.equals("2")) {

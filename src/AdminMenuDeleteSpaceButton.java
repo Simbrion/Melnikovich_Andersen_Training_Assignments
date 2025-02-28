@@ -5,8 +5,8 @@ public class AdminMenuDeleteSpaceButton implements MenuButton {
 
     @Override
     public void onPush() throws IOException {
-        Main.spaceDeleter.start();
-        Main.admin.getToMenu();
+        Main.SPACE_DELETER.start();
+        Main.ADMIN.getToMenu();
     }
 
     @Override
@@ -16,7 +16,7 @@ public class AdminMenuDeleteSpaceButton implements MenuButton {
 
     @Override
     public void show() {
-        Main.buttonShower.showButton(this, Main.adminMenuButtons);
+        Main.BUTTON_SHOWER.showButton(this, Main.ADMIN_MENU_BUTTONS);
     }
 
     @Override

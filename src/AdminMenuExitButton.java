@@ -16,7 +16,7 @@ public class AdminMenuExitButton implements MenuButton {
 
     @Override
     public void show() {
-        Main.buttonShower.showButton(this, Main.adminMenuButtons);
+        Main.BUTTON_SHOWER.showButton(this, Main.ADMIN_MENU_BUTTONS);
     }
 
     @Override

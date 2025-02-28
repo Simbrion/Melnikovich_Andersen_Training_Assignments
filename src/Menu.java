@@ -7,6 +7,6 @@ public interface Menu {
 
     void showMenu();
 
-    HashSet<Integer> getNumbersOfOptions();
+    HashSet<Integer> getMenuOptionNumbers();
 
 }

@@ -5,8 +5,8 @@ import java.time.LocalDateTime;
 public class TimeOverlapChecker {
 
     public boolean startTimeOverlaps(LocalDateTime startOfNewReservation, Reservation newReservation) {
-        if (Main.reservationsList.isEmpty()) return false;
-        for (Reservation existingReservation : Main.reservationsList) {
+        if (Main.RESERVATIONS.isEmpty()) return false;
+        for (Reservation existingReservation : Main.RESERVATIONS) {
             if (!(existingReservation.getSpace().equals(newReservation.getSpace()))) continue;
             LocalDateTime startOfExistingReservation = LocalDateTime.of(existingReservation.getDate(), existingReservation.getStartTime());
             LocalDateTime endOfExistingReservation = LocalDateTime.of(existingReservation.getDate(), existingReservation.getEndTime());
@@ -17,8 +17,8 @@ public class TimeOverlapChecker {
     }
 
     public boolean endTimeOverlaps(LocalDateTime endOfNewReservation, Reservation newReservation) {
-        if (Main.reservationsList.isEmpty()) return false;
-        for (Reservation existingReservation : Main.reservationsList) {
+        if (Main.RESERVATIONS.isEmpty()) return false;
+        for (Reservation existingReservation : Main.RESERVATIONS) {
             if (!(existingReservation.getSpace().equals(newReservation.getSpace()))) continue;
             LocalDateTime startOfExistingReservation = LocalDateTime.of(existingReservation.getDate(), existingReservation.getStartTime());
             LocalDateTime endOfExistingReservation = LocalDateTime.of(existingReservation.getDate(), existingReservation.getEndTime());

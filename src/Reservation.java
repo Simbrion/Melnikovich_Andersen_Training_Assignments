@@ -2,9 +2,10 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Reservation implements Describable {
+
     private int id;
     private Space space;
-    private String customerName;
+    private Customer customer;
     private LocalDate date;
     private LocalTime startTime;
     private LocalTime endTime;
@@ -26,12 +27,12 @@ public class Reservation implements Describable {
         return this.space;
     }
 
-    public void setCustomerName(String name) {
-        this.customerName = name;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public String getCustomerName() {
-        return this.customerName;
+        return this.customer.getName();
     }
 
     public void setDate(LocalDate date) {
@@ -61,7 +62,7 @@ public class Reservation implements Describable {
     public void printDescription() {
         System.out.println(String.format(Config.YELLOW_COLOUR + " -Reservation id: %d, reserved by %s, reserved space: %s, reserved slot: %tF, %tR-%tR." + Config.RESET_COLOUR,
                                                 this.getId(),
-                                                this.customerName,
+                                                this.customer.getName(),
                                                 this.getSpace().getName(),
                                                 this.getDate(),
                                                 this.getStartTime(),

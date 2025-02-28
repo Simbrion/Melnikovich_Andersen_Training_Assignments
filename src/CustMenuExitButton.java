@@ -1,25 +1,25 @@
 import java.io.IOException;
 
-public class CustMenuButtonShowSpaces implements MenuButton {
-    String buttonText = "Show available spaces";
+public class CustMenuExitButton implements MenuButton {
+    private String buttonText = "Exit";
 
     @Override
     public void onPush() {}
 
     @Override
     public void onPush(Customer customer) throws IOException {
-
-        Main.spaceListViewer.printList();
-        customer.getToMenu();
+        System.out.println(Config.EXIT_MESSAGE);
+        System.exit(0);
     }
 
     @Override
     public void show() {
-        Main.buttonShower.showButton(this, Main.custMenuButtons);
+        Main.BUTTON_SHOWER.showButton(this, Main.CUST_MENU_BUTTONS);
     }
 
     @Override
     public String getText() {
         return buttonText;
     }
+
 }

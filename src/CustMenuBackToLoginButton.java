@@ -1,18 +1,18 @@
 import java.io.IOException;
 
-public class CustMenuButtonBackToLogin implements MenuButton {
+public class CustMenuBackToLoginButton implements MenuButton {
     private String buttonText = "Back to login menu";
 
     public void onPush(){};
 
     @Override
     public void onPush(Customer customer) throws IOException {
-        Main.session.getToMenu();
+        Main.SESSION.getToMenu();
     }
 
     @Override
     public void show() {
-        Main.buttonShower.showButton(this, Main.custMenuButtons);
+        Main.BUTTON_SHOWER.showButton(this, Main.CUST_MENU_BUTTONS);
     }
 
     @Override

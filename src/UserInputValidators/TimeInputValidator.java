@@ -1,4 +1,4 @@
-package InputValidators;
+package UserInputValidators;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeParseException;

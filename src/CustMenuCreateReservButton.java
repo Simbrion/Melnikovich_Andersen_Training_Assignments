@@ -1,25 +1,26 @@
 import java.io.IOException;
 
-public class CustMenuButtonExit implements MenuButton {
-    private String buttonText = "Exit the application";
+public class CustMenuCreateReservButton implements MenuButton {
+    private String buttonText = "Make a new reservation";
 
     @Override
     public void onPush() {}
 
     @Override
     public void onPush(Customer customer) throws IOException {
-        System.out.println(Config.EXIT_MESSAGE);
-        System.exit(0);
+        Main.RESERV_CREATOR.createReservation(customer);
+        customer.getToMenu();
     }
 
     @Override
     public void show() {
-        Main.buttonShower.showButton(this, Main.custMenuButtons);
+        Main.BUTTON_SHOWER.showButton(this, Main.CUST_MENU_BUTTONS);
     }
 
     @Override
     public String getText() {
         return buttonText;
     }
+
 
 }

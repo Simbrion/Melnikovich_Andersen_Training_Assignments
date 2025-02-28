@@ -5,8 +5,8 @@ public class AdminMenuShowSpacesButton implements MenuButton {
 
     @Override
     public void onPush() throws IOException {
-        Main.spaceListViewer.printList();
-        Main.admin.getToMenu();
+        Main.SPACE_LIST_VIEWER.printList();
+        Main.ADMIN.getToMenu();
     }
 
     @Override
@@ -16,7 +16,7 @@ public class AdminMenuShowSpacesButton implements MenuButton {
 
     @Override
     public void show() {
-        Main.buttonShower.showButton(this, Main.adminMenuButtons);
+        Main.BUTTON_SHOWER.showButton(this, Main.ADMIN_MENU_BUTTONS);
     }
 
     @Override

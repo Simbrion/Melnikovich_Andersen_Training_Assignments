@@ -5,8 +5,8 @@ public class AdminMenuShowReservationsButton implements MenuButton {
 
     @Override
     public void onPush() throws IOException {
-        Main.reservationListViewer.printList();
-        Main.admin.getToMenu();
+        Main.RESERV_LIST_VIEWER.printList();
+        Main.ADMIN.getToMenu();
     }
 
     @Override
@@ -15,7 +15,7 @@ public class AdminMenuShowReservationsButton implements MenuButton {
 
     @Override
     public void show() {
-        Main.buttonShower.showButton(this, Main.adminMenuButtons);
+        Main.BUTTON_SHOWER.showButton(this, Main.ADMIN_MENU_BUTTONS);
     }
 
     @Override

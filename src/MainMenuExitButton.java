@@ -15,7 +15,7 @@ public class MainMenuExitButton implements MenuButton {
 
     @Override
     public void show() {
-        Main.buttonShower.showButton(this, Main.mainMenuButtons);
+        Main.BUTTON_SHOWER.showButton(this, Main.MAIN_MENU_BUTTONS);
     }
 
     @Override

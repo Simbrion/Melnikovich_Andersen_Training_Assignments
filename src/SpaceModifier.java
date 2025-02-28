@@ -4,17 +4,17 @@ public class SpaceModifier {
 
     public void start() throws IOException {
 
-            System.out.println("What is the name of the space you want to modify?");
-            Main.spaceListViewer.printList();
-            String userInput = Main.reader.readLine();
+            System.out.println(Config.YELLOW_COLOUR + "What is the name of the space you want to modify?" + Config.RESET_COLOUR);
+            Main.SPACE_LIST_VIEWER.printList();
+            String userInput = Main.READER.readLine();
             boolean spaceIsOnTheList = false;
 
-            for (Space space : Main.spacesList) {
+            for (Space space : Main.SPACES) {
                 if (userInput.equalsIgnoreCase(space.getName())) {
                     spaceIsOnTheList = true;
-                    Main.spaceNameModifier.modifySpaceName(space);
-                    Main.spaceTypeModifier.modifyType(space);
-                    Main.spacePriceModifier.modifyPrice(space);
+                    Main.SPACE_NAME_MODIFIER.modifySpaceName(space);
+                    Main.SPACE_TYPE_MODIFIER.modifyType(space);
+                    Main.SPACE_PRICE_MODIFIER.modifyPrice(space);
                     System.out.println(Config.GREEN_COLOUR + "Changes to the space have been saved!" + Config.RESET_COLOUR);
                     space.printDescription();
                     break;

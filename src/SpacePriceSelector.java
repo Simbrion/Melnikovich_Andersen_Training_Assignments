@@ -3,10 +3,10 @@ import java.io.IOException;
 public class SpacePriceSelector {
 
     public void selectPrice(Space space) throws IOException {
-        System.out.println("Please indicate the price of the space " + space.getName() + " (USD per hour).");
-        String userInput = Main.reader.readLine();
+        System.out.println(Config.YELLOW_COLOUR + "Please indicate the price of the space " + space.getName() + " (USD per hour)." + Config.RESET_COLOUR);
+        String userInput = Main.READER.readLine();
         try {
-            if (Main.inputValidator.validate(Main.positiveDigitValidator, userInput)) {
+            if (Main.INPUT_VALIDATOR.validate(Main.POSITIVE_DIGIT_VALIDATOR, userInput)) {
                 space.setPrice(Integer.parseInt(userInput));
             }
             else {

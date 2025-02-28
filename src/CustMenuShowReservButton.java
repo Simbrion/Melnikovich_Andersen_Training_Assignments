@@ -1,7 +1,7 @@
 import java.io.IOException;
 
-public class CustMenuButtonShowReserv implements MenuButton {
-    private String buttonText = "Show available reservations";
+public class CustMenuShowReservButton implements MenuButton {
+    private String buttonText = "Show my reservations";
 
     @Override
     public void onPush() {
@@ -9,13 +9,13 @@ public class CustMenuButtonShowReserv implements MenuButton {
 
     @Override
     public void onPush(Customer customer) throws IOException {
-        Main.reservationListViewer.printCustomerReservationsList(customer.getName());
+        Main.RESERV_LIST_VIEWER.printCustomerReservationsList(customer);
         customer.getToMenu();
     }
 
     @Override
     public void show() {
-        Main.buttonShower.showButton(this, Main.custMenuButtons);
+        Main.BUTTON_SHOWER.showButton(this, Main.CUST_MENU_BUTTONS);
     }
 
     @Override

@@ -21,8 +21,8 @@ public class Space implements Describable {
 
     public void initialize(String nameOfNewSpace) throws IOException {
         this.setName(nameOfNewSpace);
-        Main.spaceTypeSelector.selectType(this);
-        Main.spacePriceSelector.selectPrice(this);
+        Main.SPACE_TYPE_SELECTOR.selectType(this);
+        Main.SPACE_PRICE_SELECTOR.selectPrice(this);
     }
 
     public void setPrice(int price) {

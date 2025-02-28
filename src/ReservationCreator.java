@@ -1,25 +1,26 @@
 import java.io.IOException;
 
 public class ReservationCreator {
-    public static int idCount = 1;
+    public static int reservIdCount = 1;
 
-    public void createReservation(String customerName) throws IOException {
+    public void createReservation(Customer customer) throws IOException {
 
-        if (Main.spacesList.isEmpty()) {
+        if (Main.SPACES.isEmpty()) {
             System.out.println(Config.NO_EXISTING_SPACES);
         }
 
         else {
             Reservation newReservation = new Reservation();
-            Main.reservationSpaceSelector.select(newReservation);
-            if (newReservation.getSpace() != null) Main.reservationDateSelector.selectDate(newReservation);
-            if (newReservation.getDate() != null) Main.reservationStartTimeSelector.select(newReservation);
-            if (newReservation.getStartTime() != null) Main.reservationEndTimeSelector.selectEndTime(newReservation);
+            Main.RESERV_SPACE_SELECTOR.select(newReservation);
+            if (newReservation.getSpace() != null) Main.RESERV_DATE_SELECTOR.selectDate(newReservation);
+            if (newReservation.getDate() != null) Main.RESERV_START_TIME_SELECTOR.select(newReservation);
+            if (newReservation.getStartTime() != null) Main.RESERV_END_TIME_SELECTOR.selectEndTime(newReservation);
 
             if (reservationIsReady(newReservation)) {
-                newReservation.setId(idCount++);
-                newReservation.setCustomerName(customerName);
-                Main.reservationsList.add(newReservation);
+                newReservation.setId(reservIdCount++);
+                newReservation.setCustomer(customer);
+                Main.RESERVATIONS.add(newReservation);
+                customer.addReservation(newReservation);
                 System.out.println(Config.GREEN_COLOUR + "Reservation has been added!" + Config.RESET_COLOUR);
                 newReservation.printDescription();
             } else

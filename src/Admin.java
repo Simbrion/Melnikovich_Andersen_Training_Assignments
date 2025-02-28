@@ -7,20 +7,21 @@ public class Admin implements Menu {
     @Override
     public void getToMenu() throws IOException {
 
+        System.out.println("Administrator, what you would like me to do?");
         showMenu();
-        String userInput = Main.reader.readLine();
-        Main.menuInputValidator.checkMenuInput(this, userInput);
-        Main.adminMenuButtons.get(Integer.parseInt(userInput)).onPush();
+        String userInput = Main.READER.readLine();
+        Main.MENU_INPUT_VALIDATOR.validate(this, userInput);
+        Main.ADMIN_MENU_BUTTONS.get(Integer.parseInt(userInput)).onPush();
 
     }
 
     @Override
     public void showMenu() {
-        Main.menuShower.showMenu(adminMenuButNumbersSet, Main.adminMenuButtons);
+        Main.MENU_SHOWER.showMenu(adminMenuButNumbersSet, Main.ADMIN_MENU_BUTTONS);
     }
 
     @Override
-    public HashSet<Integer> getNumbersOfOptions() {
+    public HashSet<Integer> getMenuOptionNumbers() {
         return adminMenuButNumbersSet;
     }
 }

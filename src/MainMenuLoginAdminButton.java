@@ -5,7 +5,7 @@ public class MainMenuLoginAdminButton implements MenuButton {
 
     @Override
     public void onPush() throws IOException {
-        Main.admin.getToMenu();
+        Main.ADMIN.getToMenu();
     }
 
     @Override
@@ -14,7 +14,7 @@ public class MainMenuLoginAdminButton implements MenuButton {
 
     @Override
     public void show() {
-        Main.buttonShower.showButton(this, Main.mainMenuButtons);
+        Main.BUTTON_SHOWER.showButton(this, Main.MAIN_MENU_BUTTONS);
     }
 
     @Override

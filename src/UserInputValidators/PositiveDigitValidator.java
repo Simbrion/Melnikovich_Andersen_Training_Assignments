@@ -1,4 +1,4 @@
-package InputValidators;
+package UserInputValidators;
 
 public class PositiveDigitValidator implements ValidationOperation {
 
@@ -12,7 +12,6 @@ public class PositiveDigitValidator implements ValidationOperation {
             return Integer.parseInt(userInput) >= 0;
         }
         catch (NumberFormatException a ){
-            System.out.println("!!!");
             return false;
         }
     }

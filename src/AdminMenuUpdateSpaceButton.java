@@ -6,14 +6,14 @@ public class AdminMenuUpdateSpaceButton implements MenuButton {
     @Override
     public void onPush() throws IOException {
 
-        if (Main.spacesList.isEmpty()) {
+        if (Main.SPACES.isEmpty()) {
             System.out.println(Config.NO_EXISTING_SPACES);
-            Main.admin.getToMenu();
+            Main.ADMIN.getToMenu();
 
         }
         else {
-            Main.spaceModifier.start();
-            Main.admin.getToMenu();
+            Main.SPACE_MODIFIER.start();
+            Main.ADMIN.getToMenu();
         }
 
     }
@@ -25,7 +25,7 @@ public class AdminMenuUpdateSpaceButton implements MenuButton {
 
     @Override
     public void show() {
-        Main.buttonShower.showButton(this, Main.adminMenuButtons);
+        Main.BUTTON_SHOWER.showButton(this, Main.ADMIN_MENU_BUTTONS);
     }
 
     @Override

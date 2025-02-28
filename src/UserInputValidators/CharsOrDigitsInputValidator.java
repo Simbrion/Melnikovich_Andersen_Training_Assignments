@@ -1,4 +1,4 @@
-package InputValidators;
+package UserInputValidators;
 
 public class CharsOrDigitsInputValidator implements ValidationOperation {
 

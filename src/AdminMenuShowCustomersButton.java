@@ -1,12 +1,12 @@
 import java.io.IOException;
 
 public class AdminMenuShowCustomersButton implements MenuButton {
-    private String buttonText = "Show all registered clients";
+    private String buttonText = "Show all registered customers";
 
     @Override
     public void onPush() throws IOException {
-        Main.customerListViewer.printList();
-        Main.admin.getToMenu();
+        Main.CUSTOMER_LIST_VIEWER.printList();
+        Main.ADMIN.getToMenu();
     }
 
     @Override
@@ -16,7 +16,7 @@ public class AdminMenuShowCustomersButton implements MenuButton {
 
     @Override
     public void show() {
-        Main.buttonShower.showButton(this, Main.adminMenuButtons);
+        Main.BUTTON_SHOWER.showButton(this, Main.ADMIN_MENU_BUTTONS);
     }
 
     @Override

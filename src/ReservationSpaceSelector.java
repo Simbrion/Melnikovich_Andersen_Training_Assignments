@@ -7,10 +7,10 @@ public class ReservationSpaceSelector {
         while (true) {
 
             boolean spaceNameIsOnTheList = false;
-            System.out.println("Please insert the name of the space to be reserved.");
+            System.out.println(Config.YELLOW_COLOUR + "Please insert the name of the space to be reserved." + Config.RESET_COLOUR);
             new SpaceListViewer().printList();
-            String userInput = Main.reader.readLine();
-            for (Space space : Main.spacesList) {
+            String userInput = Main.READER.readLine();
+            for (Space space : Main.SPACES) {
                 if (userInput.equalsIgnoreCase(space.getName())) {
                     newReservation.setSpace(space);
                     spaceNameIsOnTheList = true;

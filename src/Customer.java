@@ -1,10 +1,13 @@
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 public class Customer implements Menu {
 
     private String name;
-    private HashSet<Integer> custMenuButNumbersSet = new HashSet<>();
+    private List<Reservation> customerReservations = new ArrayList<>();
+    private HashSet<Integer> custMenuOptionNumbers = new HashSet<>();
 
     public void setName(String name) {
         this.name = name;
@@ -14,23 +17,30 @@ public class Customer implements Menu {
         return this.name;
     }
 
+    public void addReservation(Reservation reservation) {
+        customerReservations.add(reservation);
+    }
+
+    public List<Reservation> getReservations() {
+        return customerReservations;
+    }
 
     public void getToMenu() throws IOException {
-
+        System.out.println("What you would like me to do?");
         showMenu();
-        String userInput = Main.reader.readLine();
-        Main.menuInputValidator.checkMenuInput(this, userInput);
-        Main.custMenuButtons.get(Integer.parseInt(userInput)).onPush(this);
+        String userInput = Main.READER.readLine();
+        Main.MENU_INPUT_VALIDATOR.validate(this, userInput);
+        Main.CUST_MENU_BUTTONS.get(Integer.parseInt(userInput)).onPush(this);
 
     }
 
     @Override
     public void showMenu() {
-        Main.menuShower.showMenu(custMenuButNumbersSet, Main.custMenuButtons);
+        Main.MENU_SHOWER.showMenu(custMenuOptionNumbers, Main.CUST_MENU_BUTTONS);
     }
 
     @Override
-    public HashSet<Integer> getNumbersOfOptions() {
-        return custMenuButNumbersSet;
+    public HashSet<Integer> getMenuOptionNumbers() {
+        return custMenuOptionNumbers;
     }
 }

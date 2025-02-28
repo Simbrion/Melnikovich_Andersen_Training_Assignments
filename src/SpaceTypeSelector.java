@@ -3,11 +3,11 @@ import java.io.IOException;
 public class SpaceTypeSelector {
 
     public void selectType(Space space) throws IOException {
-        System.out.println("Please indicate the type of the space " + space.getName() +
+        System.out.println(Config.YELLOW_COLOUR + "Please indicate the type of the space " + space.getName() +
                 "\n 1. Open space" +
                 "\n 2. Private room" +
-                "\n 3. Conference room");
-        String userInput = Main.reader.readLine();
+                "\n 3. Conference room" + Config.RESET_COLOUR);
+        String userInput = Main.READER.readLine();
         switch (userInput) {
             case "1": {
                 space.setType(TypeOfSpace.OPEN_SPACE);
