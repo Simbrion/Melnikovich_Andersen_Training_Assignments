@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class ReservationCanceller {
+public class ReservationCanceler {
 
     public void cancelReservation(Customer customer) throws IOException {
 

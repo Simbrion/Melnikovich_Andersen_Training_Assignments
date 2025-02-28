@@ -94,7 +94,7 @@ public class Main implements Menu {
 
     //Reservation operations modules initialization
     public static final ReservationCreator RESERV_CREATOR = new ReservationCreator();
-    public static final ReservationCanceller RESERV_CANCELLER = new ReservationCanceller();
+    public static final ReservationCanceler RESERV_CANCELLER = new ReservationCanceler();
     public static final ReservationDateSelector RESERV_DATE_SELECTOR = new ReservationDateSelector();
     public static final ReservationStartTimeSelector RESERV_START_TIME_SELECTOR = new ReservationStartTimeSelector();
     public static final ReservationEndTimeSelector RESERV_END_TIME_SELECTOR = new ReservationEndTimeSelector();
@@ -105,7 +105,7 @@ public class Main implements Menu {
     public static void main(String[] args) throws Exception {
 
         // UNCOMMENT TO PERFORM INITIALIZATION WITH SOME DATA PRELOADED (FOR TESTING)
-        new TestData().load();
+        //new TestData().load();
 
         SESSION.getToMenu();
 
