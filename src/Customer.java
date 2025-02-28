@@ -1,7 +1,10 @@
 import java.io.IOException;
+import java.util.HashSet;
 
 public class Customer implements Menu {
+
     private String name;
+    private HashSet<Integer> custMenuButNumbersSet = new HashSet<>();
 
     public void setName(String name) {
         this.name = name;
@@ -11,51 +14,23 @@ public class Customer implements Menu {
         return this.name;
     }
 
+
     public void getToMenu() throws IOException {
 
-        System.out.println(this.name + ", what would you like me to do? " +
-                "\n 1. Browse available spaces" +
-                "\n 2. Make a reservation" +
-                "\n 3. Show my reservations" +
-                "\n 4. Cancel my reservation" +
-                "\n 5. Back to login menu" +
-                "\n\n 0. Exit");
-
+        showMenu();
         String userInput = Main.reader.readLine();
-        switch (userInput) {
-            case "1" :{
-                Main.spaceListViewer.printList();
-                this.getToMenu();
-                break;
-            }
-            case "2" : {
-                    Main.reservationCreator.createReservation(this.getName());
-                    this.getToMenu();
-                    break;
-            }
-            case "3" : {
-                Main.reservationListViewer.printCustomerReservationsList(this.getName());
-                this.getToMenu();
-                break;
-            }
-            case "4" : {
-                Main.reservationCanceller.cancelReservation(this);
-                this.getToMenu();
-                break;
-            }
-            case "5" : {
-                Main.session.getToMenu();
-                break;
-            }
-            case "0" : {
-                System.out.println(Config.EXIT_MESSAGE);
-                System.exit(0);
-                break;
-                }
-            default: {
-                System.out.println(Config.WRONG_INPUT_MESSAGE);
-                this.getToMenu();
-            }
-        }
+        Main.menuInputValidator.checkMenuInput(this, userInput);
+        Main.custMenuButtons.get(Integer.parseInt(userInput)).onPush(this);
+
+    }
+
+    @Override
+    public void showMenu() {
+        Main.menuShower.showMenu(custMenuButNumbersSet, Main.custMenuButtons);
+    }
+
+    @Override
+    public HashSet<Integer> getNumbersOfOptions() {
+        return custMenuButNumbersSet;
     }
 }

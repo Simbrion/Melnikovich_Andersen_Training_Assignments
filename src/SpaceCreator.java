@@ -10,7 +10,7 @@ public class SpaceCreator {
 
         boolean inputIsValid = Main.inputValidator.validate(Main.charsOrDigitsInputValidator, userInput);
 
-        if (inputIsValid) {
+        if (!inputIsValid) {
             System.out.println(Config.EMPTY_INPUT);
             start();
         }

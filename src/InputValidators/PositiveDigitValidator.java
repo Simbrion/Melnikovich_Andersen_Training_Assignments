@@ -8,6 +8,12 @@ public class PositiveDigitValidator implements ValidationOperation {
         for (char a : userInputAsChars) {
             if (!Character.isDigit(a)) return false;
         }
-        return Integer.parseInt(userInput) >= 0;
+        try {
+            return Integer.parseInt(userInput) >= 0;
+        }
+        catch (NumberFormatException a ){
+            System.out.println("!!!");
+            return false;
+        }
     }
 }
