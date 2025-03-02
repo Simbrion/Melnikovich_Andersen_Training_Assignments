@@ -1,17 +1,19 @@
-package UI.Admin;
+package UI.AdminMenu;
+
+import java.io.IOException;
 
 import DataTypesAndOperations.DataTypes.Customer;
 import Main.*;
 import UI.*;
 
-import java.io.IOException;
 
-public class AdminMenuBackToLoginButton implements MenuButton {
-    private String buttonText = "Back to login menu";
+public class AdminMenuDeleteSpaceButton implements MenuButton {
+    private String buttonText = "Delete an existing new space";
 
     @Override
     public void onPush() throws IOException {
-        Main.SESSION.getToMenu();
+        Main.SPACE_DELETER.start();
+        Main.ADMIN.getToMenu();
     }
 
     @Override

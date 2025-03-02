@@ -33,9 +33,11 @@ public class DataLoader {
         uploadReservationFiles(reservationFilesInDataFolder);
 
         //Reservations IDCount adjustment
+        int maxIndex = 1;
         for (Customer customer : Main.CUSTOMERS) {
             for (Reservation reservation : customer.getReservations()) {
-                Main.RESERV_CREATOR.setReservIdCount(reservation.getId()+1);
+                if (reservation.getId() > maxIndex) maxIndex = reservation.getId();
+                Main.RESERV_CREATOR.setReservIdCount(maxIndex + 1);
             }
         }
 

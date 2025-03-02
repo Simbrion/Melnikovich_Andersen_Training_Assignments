@@ -1,4 +1,4 @@
-package UI.Admin;
+package UI.CustomerMenu;
 
 import java.io.IOException;
 
@@ -7,23 +7,22 @@ import Main.*;
 import UI.*;
 
 
-public class AdminMenuDeleteSpaceButton implements MenuButton {
-    private String buttonText = "Delete an existing new space";
+public class CustMenuShowSpacesButton implements MenuButton {
+    String buttonText = "Show available spaces";
 
     @Override
-    public void onPush() throws IOException {
-        Main.SPACE_DELETER.start();
-        Main.ADMIN.getToMenu();
-    }
+    public void onPush() {}
 
     @Override
     public void onPush(Customer customer) throws IOException {
 
+        Main.SPACE_LIST_VIEWER.printList();
+        customer.getToMenu();
     }
 
     @Override
     public void show() {
-        Main.BUTTON_SHOWER.showButton(this, Main.ADMIN_MENU_BUTTONS);
+        Main.BUTTON_SHOWER.showButton(this, Main.CUST_MENU_BUTTONS);
     }
 
     @Override

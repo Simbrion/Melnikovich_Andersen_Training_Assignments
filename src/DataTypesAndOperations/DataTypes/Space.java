@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.util.Objects;
 
-import DataTypesAndOperations.SpaceOperators.TypeOfSpace;
 import Main.*;
 
 public class Space implements Describable, Serializable {

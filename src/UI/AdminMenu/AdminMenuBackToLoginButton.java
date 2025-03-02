@@ -1,20 +1,17 @@
-package UI.Admin;
-
-import java.io.IOException;
+package UI.AdminMenu;
 
 import DataTypesAndOperations.DataTypes.Customer;
 import Main.*;
 import UI.*;
 
+import java.io.IOException;
 
-public class AdminMenuExitButton implements MenuButton {
-    private String buttonText = "Exit";
+public class AdminMenuBackToLoginButton implements MenuButton {
+    private String buttonText = "Back to login menu";
 
     @Override
     public void onPush() throws IOException {
-        Main.DATA_SAVER.saveSessionData();
-        System.out.println(Config.EXIT_MESSAGE);
-        System.exit(0);
+        Main.SESSION.getToMenu();
     }
 
     @Override

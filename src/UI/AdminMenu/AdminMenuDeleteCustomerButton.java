@@ -1,18 +1,18 @@
-package UI.Admin;
+package UI.AdminMenu;
+
+import DataTypesAndOperations.DataTypes.Customer;
+import Main.Main;
+import UI.MenuButton;
 
 import java.io.IOException;
 
-import DataTypesAndOperations.DataTypes.Customer;
-import Main.*;
-import UI.*;
 
-
-public class AdminMenuShowSpacesButton implements MenuButton {
-    private String buttonText = "Show all available spaces";
+public class AdminMenuDeleteCustomerButton implements MenuButton {
+    private String buttonText = "Delete an existing customer";
 
     @Override
     public void onPush() throws IOException {
-        Main.SPACE_LIST_VIEWER.printList();
+        Main.CUSTOMER_DELETER.start();
         Main.ADMIN.getToMenu();
     }
 

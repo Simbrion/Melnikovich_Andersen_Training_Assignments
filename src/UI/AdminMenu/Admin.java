@@ -1,4 +1,4 @@
-package UI.Admin;
+package UI.AdminMenu;
 
 import Main.*;
 import UI.*;

@@ -1,4 +1,4 @@
-package UI.Customer;
+package UI.CustomerMenu;
 
 import java.io.IOException;
 
@@ -7,16 +7,15 @@ import Main.*;
 import UI.*;
 
 
-public class CustMenuShowReservButton implements MenuButton {
-    private String buttonText = "Show my reservations";
+public class CustMenuCreateReservButton implements MenuButton {
+    private String buttonText = "Make a new reservation";
 
     @Override
-    public void onPush() {
-    }
+    public void onPush() {}
 
     @Override
     public void onPush(Customer customer) throws IOException {
-        Main.RESERV_LIST_VIEWER.printCustomerReservationsList(customer);
+        Main.RESERV_CREATOR.createReservation(customer);
         customer.getToMenu();
     }
 
@@ -29,4 +28,6 @@ public class CustMenuShowReservButton implements MenuButton {
     public String getText() {
         return buttonText;
     }
+
+
 }

@@ -1,4 +1,4 @@
-package UI.Admin;
+package UI.AdminMenu;
 
 import java.io.IOException;
 
@@ -7,12 +7,12 @@ import Main.*;
 import UI.*;
 
 
-public class AdminMenuShowCustomersButton implements MenuButton {
-    private String buttonText = "Show all existing customers";
+public class AdminMenuShowSpacesButton implements MenuButton {
+    private String buttonText = "Show all available spaces";
 
     @Override
     public void onPush() throws IOException {
-        Main.CUSTOMER_LIST_VIEWER.printList();
+        Main.SPACE_LIST_VIEWER.printList();
         Main.ADMIN.getToMenu();
     }
 

@@ -1,4 +1,4 @@
-package UI.Customer;
+package UI.CustomerMenu;
 
 import java.io.IOException;
 
@@ -6,14 +6,17 @@ import DataTypesAndOperations.DataTypes.Customer;
 import Main.*;
 import UI.*;
 
-public class CustMenuBackToLoginButton implements MenuButton {
-    private String buttonText = "Back to login menu";
 
-    public void onPush(){};
+public class CustMenuCancelReservButton implements MenuButton {
+    private String buttonText = "Cancel my reservation";
+
+    @Override
+    public void onPush() {}
 
     @Override
     public void onPush(Customer customer) throws IOException {
-        Main.SESSION.getToMenu();
+        Main.RESERV_CANCELLER.cancelReservation(customer);
+        customer.getToMenu();
     }
 
     @Override
@@ -25,4 +28,5 @@ public class CustMenuBackToLoginButton implements MenuButton {
     public String getText() {
         return buttonText;
     }
+
 }

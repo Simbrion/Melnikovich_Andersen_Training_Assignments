@@ -1,4 +1,4 @@
-package DataTypesAndOperations.SpaceOperators;
+package DataTypesAndOperations.DataTypes;
 
 public enum TypeOfSpace {
     OPEN_SPACE,

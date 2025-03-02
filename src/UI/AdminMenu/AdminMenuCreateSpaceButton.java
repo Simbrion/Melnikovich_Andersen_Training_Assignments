@@ -1,23 +1,23 @@
-package UI.Admin;
-
-import java.io.IOException;
+package UI.AdminMenu;
 
 import DataTypesAndOperations.DataTypes.Customer;
 import Main.*;
 import UI.*;
 
+import java.io.IOException;
 
-public class AdminMenuShowReservationsButton implements MenuButton {
-    private String buttonText = "Show all registered reservations";
+public class AdminMenuCreateSpaceButton implements MenuButton {
+    private String buttonText = "Create a new space";
 
     @Override
     public void onPush() throws IOException {
-        Main.RESERV_LIST_VIEWER.printList();
+        Main.SPACE_CREATOR.start();
         Main.ADMIN.getToMenu();
     }
 
     @Override
     public void onPush(Customer customer) throws IOException {
+
     }
 
     @Override

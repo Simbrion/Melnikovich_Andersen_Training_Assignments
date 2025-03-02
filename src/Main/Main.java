@@ -19,8 +19,8 @@ import java.util.List;
 
 import DataTypesAndOperations.ReservationOperators.*;
 import UI.*;
-import UI.Admin.*;
-import UI.Customer.*;
+import UI.AdminMenu.*;
+import UI.CustomerMenu.*;
 import UI.MainMenu.*;
 import UtilityServices.*;
 import DataTypesAndOperations.DiskDataOperation.DataDeleter;

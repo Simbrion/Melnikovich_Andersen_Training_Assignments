@@ -3,6 +3,7 @@ package DataTypesAndOperations.SpaceOperators;
 import java.io.IOException;
 
 import DataTypesAndOperations.DataTypes.Space;
+import DataTypesAndOperations.DataTypes.TypeOfSpace;
 import Main.*;
 
 public class SpaceTypeSelector {

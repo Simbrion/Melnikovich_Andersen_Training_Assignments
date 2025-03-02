@@ -1,18 +1,28 @@
-package UI.Admin;
+package UI.AdminMenu;
+
+import java.io.IOException;
 
 import DataTypesAndOperations.DataTypes.Customer;
 import Main.*;
 import UI.*;
 
-import java.io.IOException;
 
-public class AdminMenuCreateSpaceButton implements MenuButton {
-    private String buttonText = "Create a new space";
+public class AdminMenuUpdateSpaceButton implements MenuButton {
+    private String buttonText = "Update an existing space";
 
     @Override
     public void onPush() throws IOException {
-        Main.SPACE_CREATOR.start();
-        Main.ADMIN.getToMenu();
+
+        if (Main.SPACES.isEmpty()) {
+            System.out.println(Config.NO_EXISTING_SPACES);
+            Main.ADMIN.getToMenu();
+
+        }
+        else {
+            Main.SPACE_MODIFIER.start();
+            Main.ADMIN.getToMenu();
+        }
+
     }
 
     @Override

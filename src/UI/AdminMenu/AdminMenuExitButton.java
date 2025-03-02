@@ -1,4 +1,4 @@
-package UI.Admin;
+package UI.AdminMenu;
 
 import java.io.IOException;
 
@@ -7,22 +7,14 @@ import Main.*;
 import UI.*;
 
 
-public class AdminMenuUpdateSpaceButton implements MenuButton {
-    private String buttonText = "Update an existing space";
+public class AdminMenuExitButton implements MenuButton {
+    private String buttonText = "Exit";
 
     @Override
     public void onPush() throws IOException {
-
-        if (Main.SPACES.isEmpty()) {
-            System.out.println(Config.NO_EXISTING_SPACES);
-            Main.ADMIN.getToMenu();
-
-        }
-        else {
-            Main.SPACE_MODIFIER.start();
-            Main.ADMIN.getToMenu();
-        }
-
+        Main.DATA_SAVER.saveSessionData();
+        System.out.println(Config.EXIT_MESSAGE);
+        System.exit(0);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package UI.Customer;
+package UI.CustomerMenu;
 
 import java.io.IOException;
 
@@ -6,18 +6,17 @@ import DataTypesAndOperations.DataTypes.Customer;
 import Main.*;
 import UI.*;
 
-
-public class CustMenuShowSpacesButton implements MenuButton {
-    String buttonText = "Show available spaces";
+public class CustMenuExitButton implements MenuButton {
+    private String buttonText = "Exit";
 
     @Override
     public void onPush() {}
 
     @Override
     public void onPush(Customer customer) throws IOException {
-
-        Main.SPACE_LIST_VIEWER.printList();
-        customer.getToMenu();
+        Main.DATA_SAVER.saveSessionData();
+        System.out.println(Config.EXIT_MESSAGE);
+        System.exit(0);
     }
 
     @Override
@@ -29,4 +28,5 @@ public class CustMenuShowSpacesButton implements MenuButton {
     public String getText() {
         return buttonText;
     }
+
 }

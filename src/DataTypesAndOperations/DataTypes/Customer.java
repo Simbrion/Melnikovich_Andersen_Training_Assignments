@@ -56,14 +56,12 @@ public class Customer implements Menu, Serializable {
         if (this == object) return true;
         if (object == null || getClass() != object.getClass()) {
             return false;
-
         }
         Customer other = (Customer) object;
         return (this.name.equals(other.getName()));
     }
 
     public int hashCode () {
-
         return Objects.hash(name);
 
     }
