@@ -1,8 +1,6 @@
 package DataTypesAndOperations.DiskDataOperation;
 
-import DataTypesAndOperations.DataTypes.Reservation;
-import DataTypesAndOperations.DataTypes.Space;
-import DataTypesAndOperations.DataTypes.Customer;
+import DataTypesAndOperations.DataTypes.*;
 import Main.*;
 import UtilityServices.CustomExceptions.DataFolderNotFoundException;
 
@@ -11,6 +9,8 @@ import java.io.*;
 import java.nio.file.Files;
 
 public class DataSaver {
+
+    private static final String DATA_FOLDER_NOT_FOUND = "Data folder not found!";
 
     public void saveSessionData () throws IOException {
 
@@ -24,7 +24,7 @@ public class DataSaver {
 
             }
             catch (FileNotFoundException fileNotFoundException) {
-                if (!Files.exists(Config.DATASAVE_DIRECTORY)) throw new DataFolderNotFoundException("Data folder not found!");
+                if (!Files.exists(Config.DATASAVE_DIRECTORY)) throw new DataFolderNotFoundException(DATA_FOLDER_NOT_FOUND);
             }
             System.out.println(Config.YELLOW_COLOUR + String.format("Data related to customer %s has been saved to */Data directory.",
                                                                     customer.getName()) + Config.RESET_COLOUR);
@@ -41,7 +41,7 @@ public class DataSaver {
 
             }
             catch (FileNotFoundException fileNotFoundException) {
-                if (!Files.exists(Config.DATASAVE_DIRECTORY)) throw new DataFolderNotFoundException("Data folder not found!");
+                if (!Files.exists(Config.DATASAVE_DIRECTORY)) throw new DataFolderNotFoundException(DATA_FOLDER_NOT_FOUND);
             }
             System.out.println(Config.YELLOW_COLOUR + String.format("Data related to reservation with ID %d by customer %s has been saved to */Data directory.",
                                                         reservation.getId(),
@@ -59,7 +59,7 @@ public class DataSaver {
 
             }
             catch (FileNotFoundException fileNotFoundException) {
-                if (!Files.exists(Config.DATASAVE_DIRECTORY)) throw new DataFolderNotFoundException("Data folder not found!");
+                if (!Files.exists(Config.DATASAVE_DIRECTORY)) throw new DataFolderNotFoundException(DATA_FOLDER_NOT_FOUND);
             }
             System.out.println(Config.YELLOW_COLOUR + String.format("Data related to space named %s has been saved to */Data directory.",
                                                         space.getName()) + Config.RESET_COLOUR);
