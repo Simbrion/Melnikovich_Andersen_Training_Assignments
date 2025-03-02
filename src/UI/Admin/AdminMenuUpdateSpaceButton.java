@@ -8,7 +8,7 @@ import UI.*;
 
 
 public class AdminMenuUpdateSpaceButton implements MenuButton {
-    private String buttonText = "Update an existing new space";
+    private String buttonText = "Update an existing space";
 
     @Override
     public void onPush() throws IOException {

@@ -8,7 +8,7 @@ import UI.*;
 
 
 public class AdminMenuShowCustomersButton implements MenuButton {
-    private String buttonText = "Show all registered customers";
+    private String buttonText = "Show all existing customers";
 
     @Override
     public void onPush() throws IOException {
