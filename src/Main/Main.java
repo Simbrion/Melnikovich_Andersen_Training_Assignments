@@ -24,6 +24,7 @@ import UI.CustomerMenu.*;
 import UI.MainMenu.*;
 import UtilityServices.*;
 import DataTypesAndOperations.DiskDataOperation.DataDeleter;
+import UtilityServices.CustomClassLoader.CustomClassLoader;
 import UtilityServices.ListViewers.CustomerListViewer;
 import UtilityServices.ListViewers.ReservationsListViewer;
 import UtilityServices.ListViewers.SpaceListViewer;
@@ -141,6 +142,9 @@ public class Main implements Menu {
 
 
     public static void main(String[] args) throws Exception {
+
+        CustomClassLoader classLoader = new CustomClassLoader();
+        classLoader.loadClass("ExampleClass");
 
         DATA_LOADER.loadData();
 
