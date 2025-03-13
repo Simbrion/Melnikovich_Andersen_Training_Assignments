@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class ReservationSpaceSelector {
 
-    public void select(Reservation newReservation) throws IOException {
+    public void selectSpace(Reservation newReservation) throws IOException {
 
         while (true) {
 

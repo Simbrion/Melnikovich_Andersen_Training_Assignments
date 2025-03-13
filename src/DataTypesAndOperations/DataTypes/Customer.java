@@ -5,10 +5,7 @@ import UI.*;
 
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 
 public class Customer implements Menu, Serializable {
@@ -22,7 +19,7 @@ public class Customer implements Menu, Serializable {
     }
 
     public String getName() {
-        return this.name;
+       return Optional.ofNullable(this.name).orElse("Unnamed_User");
     }
 
     public void addReservation(Reservation reservation) {

@@ -3,6 +3,7 @@ package DataTypesAndOperations.DataTypes;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.Optional;
 
 import Main.*;
 
@@ -14,7 +15,7 @@ public class Space implements Describable, Serializable {
 
 
     public String getName() {
-        return this.name;
+        return Optional.ofNullable(this.name).orElse("Unnamed_Space");
     }
 
     public void setName(String name) {
