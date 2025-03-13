@@ -8,7 +8,7 @@ import UI.*;
 
 
 public class AdminMenuDeleteSpaceButton implements MenuButton {
-    private String buttonText = "Delete an existing new space";
+    private String buttonText = "Delete an existing space";
 
     @Override
     public void onPush() throws IOException {

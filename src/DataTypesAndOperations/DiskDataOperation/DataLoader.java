@@ -98,7 +98,6 @@ public class DataLoader {
                 }
                 fileInputStream.close();
                 objectOutputStream.close();
-
             }
             catch (IOException e) {
                 System.out.println(Config.RED_COLOUR + "IOException caught!" + Config.RESET_COLOUR);
@@ -165,7 +164,6 @@ public class DataLoader {
                     System.out.println(Config.YELLOW_COLOUR + "Reservation uploaded: " + Config.RESET_COLOUR);
                     reservation.printDescription();
                 }
-
                 fileInputStream.close();
                 objectOutputStream.close();
             }

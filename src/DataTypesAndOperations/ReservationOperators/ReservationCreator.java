@@ -26,7 +26,7 @@ public class ReservationCreator {
 
         else {
             Reservation newReservation = new Reservation();
-            Main.RESERV_SPACE_SELECTOR.select(newReservation);
+            Main.RESERV_SPACE_SELECTOR.selectSpace(newReservation);
             if (newReservation.getSpace() != null) Main.RESERV_DATE_SELECTOR.selectDate(newReservation);
             if (newReservation.getDate() != null) Main.RESERV_START_TIME_SELECTOR.select(newReservation);
             if (newReservation.getStartTime() != null) Main.RESERV_END_TIME_SELECTOR.selectEndTime(newReservation);
