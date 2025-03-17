@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9226fcc9-2cfe-4348-a43e-35402f31c9cc" name="Changes" comment="1. GetName methods of Customer and Space class are changed to use Optional.&#10;2. DataLoader and DataDeleter are changes to use optional;&#10;3. MenuShower class changes to use lambdas instead of ForEach.&#10;4. Few typos fixed.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CoworkingSpaceReservationApp-1.0-SNAPSHOT.jar" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Lecture_1_Assignment_Melnikovich" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Simbrion&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Simbrion/Melnikovich_Andersen_Training_Assignments.git&quot;,
+    &quot;accountId&quot;: &quot;d719c43c-3a96-4ab7-a874-0b8aafc7b5e8&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2tXdNfuxAFoMdYeihY3UsSXFJ5C" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ExampleClass.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.CoworkingSpaceReservationApp [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.CoworkingSpaceReservationApp [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;ToolWindow.Debug.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Lecture__6__Assignment__(MAVEN)&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Java/Anderes_Training_Projects/Melnikovich_Andersen_Training_Assignments&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Main" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Java\Anderes_Training_Projects\Melnikovich_Andersen_Training_Assignments\ExternalClasses" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Java\Anderes_Training_Projects\Melnikovich_Andersen_Training_Assignments\src\Main\java" />
+      <recent name="F:\Java\Anderes_Training_Projects\Melnikovich_Andersen_Training_Assignments\src\UtilityServices\CustomClassLoader" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="UI.Admin" />
+      <recent name="UI.DataOperationsDialogBoxes.SpaceOperationDialogBoxes" />
+      <recent name="UI.DataOperationsDialogBoxes" />
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="CoworkingSpaceReservationApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="CoworkingSpaceReservationApp" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9226fcc9-2cfe-4348-a43e-35402f31c9cc" name="Changes" comment="" />
+      <created>1740502315359</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740502315359</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1740691647576</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740691647576</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Several bugs fixed">
+      <option name="closed" value="true" />
+      <created>1740701016378</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740701016378</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Several bugs fixed">
+      <option name="closed" value="true" />
+      <created>1740751576416</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740751576416</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Open-Closed Principle implementation fixes">
+      <option name="closed" value="true" />
+      <created>1740751621612</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740751621612</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Additional fixes to implement Opened/Closed principle, added MenuButtor iterface, etc.">
+      <option name="closed" value="true" />
+      <created>1740766530941</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740766530941</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Code optimization, list of reservations added to a customer, minor bugs fixes.">
+      <option name="closed" value="true" />
+      <created>1740776976251</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740776976251</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Typoes and minor fixes">
+      <option name="closed" value="true" />
+      <created>1740777249855</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740777249855</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Typos and minor fixes">
+      <option name="closed" value="true" />
+      <created>1740778296286</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740778296286</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Typos and minor fixes">
+      <option name="closed" value="true" />
+      <created>1740778385970</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1740778385970</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Developments related to completions of task of Lecture 2:&#10;&#10;1.&#9;Implemented application data saving (using serialization). All spaces, reservations and customers created during each session are saved to automatically created “Data” folder in the application main directory. The saving takes place on normal exit points of the application (upon selecting “Exit” option in Admin, Customer or Main menu). Each time the space, reservation or customer is deleted during the session, the respective files in Data folder are deleted as well.&#10;&#10;2.&#9;Implemented application data uploading (using deserialization). All spaces, reservations and customers created during the previous session are uploaded from “Data” folder upon each start of the session. That allows from continuous use of the application from session to session.&#10;&#10;3.&#9;Added custom exception “Data folder not found” extending FileNotFoundException that is thrown when the “Data” folder is deleted during the unfinished session. The exception is thrown when exiting the application upon unsuccessful attempt to save session data.&#10;&#10;4.&#9;Application classes distributed in separate packages to allow for convenient maintenance of the application.&#10;&#10;5.&#9;Customer deletion functionality added (a customer may be deleted from Administrator menu).&#10;&#10;6.&#9;Minor bugs and typos fixed.">
+      <option name="closed" value="true" />
+      <created>1740925692608</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1740925692608</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Minor typos fixed">
+      <option name="closed" value="true" />
+      <created>1740926344576</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1740926344576</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Reservation ID counter bug fixed.&#10;Gitignore amended to avoid commits of unnecessary files.">
+      <option name="closed" value="true" />
+      <created>1740943905916</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1740943905916</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Minor adjustments.">
+      <option name="closed" value="true" />
+      <created>1740948375085</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1740948375085</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Minor adjustments.">
+      <option name="closed" value="true" />
+      <created>1741019729374</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1741019729375</updated>
+    </task>
+    <task id="LOCAL-00015" summary="GitIgnore adjusted to commit example class file.">
+      <option name="closed" value="true" />
+      <created>1741218824772</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1741218824773</updated>
+    </task>
+    <task id="LOCAL-00016" summary="CustomClassLoader added to the application.">
+      <option name="closed" value="true" />
+      <created>1741219267061</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1741219267061</updated>
+    </task>
+    <task id="LOCAL-00017" summary="1. GetName methods of Customer and Space class are changed to use Optional.&#10;2. DataLoader and DataDeleter are changes to use optional;&#10;3. MenuShower class changes to use lambdas instead of ForEach.&#10;4. Few typos fixed.">
+      <option name="closed" value="true" />
+      <created>1741877130049</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1741877130049</updated>
+    </task>
+    <task id="LOCAL-00018" summary="1. GetName methods of Customer and Space class are changed to use Optional.&#10;2. DataLoader and DataDeleter are changes to use optional;&#10;3. MenuShower class changes to use lambdas instead of ForEach.&#10;4. Few typos fixed.">
+      <option name="closed" value="true" />
+      <created>1742227270721</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1742227270721</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Several bugs fixed" />
+    <MESSAGE value="Open-Closed Principle implementation fixes" />
+    <MESSAGE value="Additional fixes to implement Opened/Closed principle, added MenuButtor iterface, etc." />
+    <MESSAGE value="Code optimization, list of reservations added to a customer, minor bugs fixes." />
+    <MESSAGE value="Typoes and minor fixes" />
+    <MESSAGE value="Typos and minor fixes" />
+    <MESSAGE value="Developments related to completions of task of Lecture 2:&#10;&#10;1.&#9;Implemented application data saving (using serialization). All spaces, reservations and customers created during each session are saved to automatically created “Data” folder in the application main directory. The saving takes place on normal exit points of the application (upon selecting “Exit” option in Admin, Customer or Main menu). Each time the space, reservation or customer is deleted during the session, the respective files in Data folder are deleted as well.&#10;&#10;2.&#9;Implemented application data uploading (using deserialization). All spaces, reservations and customers created during the previous session are uploaded from “Data” folder upon each start of the session. That allows from continuous use of the application from session to session.&#10;&#10;3.&#9;Added custom exception “Data folder not found” extending FileNotFoundException that is thrown when the “Data” folder is deleted during the unfinished session. The exception is thrown when exiting the application upon unsuccessful attempt to save session data.&#10;&#10;4.&#9;Application classes distributed in separate packages to allow for convenient maintenance of the application.&#10;&#10;5.&#9;Customer deletion functionality added (a customer may be deleted from Administrator menu).&#10;&#10;6.&#9;Minor bugs and typos fixed." />
+    <MESSAGE value="Minor typos fixed" />
+    <MESSAGE value="Reservation ID counter bug fixed." />
+    <MESSAGE value="Reservation ID counter bug fixed.&#10;Gitignore amended to avoid commits of unnecessary files." />
+    <MESSAGE value="Minor adjustments." />
+    <MESSAGE value="GitIgnore adjusted to commit example class file." />
+    <MESSAGE value="CustomClassLoader added to the application." />
+    <MESSAGE value="1. GetName methods of Customer and Space class are changed to use Optional.&#10;2. DataLoader and DataDeleter are changes to use optional;&#10;3. MenuShower class changes to use lambdas instead of ForEach.&#10;4. Few typos fixed." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. GetName methods of Customer and Space class are changed to use Optional.&#10;2. DataLoader and DataDeleter are changes to use optional;&#10;3. MenuShower class changes to use lambdas instead of ForEach.&#10;4. Few typos fixed." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main/java/UtilityServices/UserInputValidators/PositiveDigitValidator.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="25" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.NotSerializableException" package="java.io" />
+          <option name="timeStamp" value="27" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="43" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="import java.io.IOException;&#10;" />
+        <watch expression="userInput" />
+        <watch expression="&#10;                spaceNameIsOnTheList = true;" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/vcs_xml$Main.ic" NAME="Main Coverage Results" MODIFIED="1740756519261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+  </component>
+</project>
