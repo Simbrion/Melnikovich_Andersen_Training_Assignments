@@ -5,74 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9226fcc9-2cfe-4348-a43e-35402f31c9cc" name="Changes" comment="1. GetName methods of Customer and Space class are changed to use Optional.&#10;2. DataLoader and DataDeleter are changes to use optional;&#10;3. MenuShower class changes to use lambdas instead of ForEach.&#10;4. Few typos fixed.">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/CustomerOperations/CustomerDeleter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/CustomerOperations/CustomerDeleter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/CustomerOperations/CustomerLogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/CustomerOperations/CustomerLogIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/DataTypes/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DataTypes/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/DataTypes/Describable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DataTypes/Describable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/DataTypes/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DataTypes/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/DataTypes/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DataTypes/Space.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/DataTypes/TypeOfSpace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DataTypes/TypeOfSpace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/DiskDataOperation/DataDeleter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DiskDataOperation/DataDeleter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/DiskDataOperation/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DiskDataOperation/DataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/DiskDataOperation/DataSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DiskDataOperation/DataSaver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/ReservationOperators/ReservationCanceler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/ReservationOperators/ReservationCanceler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/ReservationOperators/ReservationCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/ReservationOperators/ReservationCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/ReservationOperators/ReservationDateSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/ReservationOperators/ReservationDateSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/ReservationOperators/ReservationEndTimeSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/ReservationOperators/ReservationEndTimeSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/ReservationOperators/ReservationSpaceSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/ReservationOperators/ReservationSpaceSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/ReservationOperators/ReservationStartTimeSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/ReservationOperators/ReservationStartTimeSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/SpaceOperators/SpaceCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/SpaceOperators/SpaceCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/SpaceOperators/SpaceDeleter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/SpaceOperators/SpaceDeleter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/SpaceOperators/SpaceModifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/SpaceOperators/SpaceModifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/SpaceOperators/SpaceNameModifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/SpaceOperators/SpaceNameModifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/SpaceOperators/SpacePriceModifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/SpaceOperators/SpacePriceModifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/SpaceOperators/SpacePriceSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/SpaceOperators/SpacePriceSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/SpaceOperators/SpaceTypeModifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/SpaceOperators/SpaceTypeModifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTypesAndOperations/SpaceOperators/SpaceTypeSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/SpaceOperators/SpaceTypeSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/MainPackage/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/MainPackage/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/AdminMenu/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/AdminMenu/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/AdminMenu/AdminMenuBackToLoginButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/AdminMenu/AdminMenuBackToLoginButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/AdminMenu/AdminMenuCreateSpaceButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/AdminMenu/AdminMenuCreateSpaceButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/AdminMenu/AdminMenuDeleteCustomerButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/AdminMenu/AdminMenuDeleteCustomerButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/AdminMenu/AdminMenuDeleteSpaceButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/AdminMenu/AdminMenuDeleteSpaceButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/AdminMenu/AdminMenuExitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/AdminMenu/AdminMenuExitButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/AdminMenu/AdminMenuShowCustomersButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/AdminMenu/AdminMenuShowCustomersButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/AdminMenu/AdminMenuShowReservationsButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/AdminMenu/AdminMenuShowReservationsButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/AdminMenu/AdminMenuShowSpacesButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/AdminMenu/AdminMenuShowSpacesButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/AdminMenu/AdminMenuUpdateSpaceButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/AdminMenu/AdminMenuUpdateSpaceButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/CustomerMenu/CustMenuBackToLoginButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/CustomerMenu/CustMenuBackToLoginButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/CustomerMenu/CustMenuCancelReservButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/CustomerMenu/CustMenuCancelReservButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/CustomerMenu/CustMenuCreateReservButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/CustomerMenu/CustMenuCreateReservButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/CustomerMenu/CustMenuExitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/CustomerMenu/CustMenuExitButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/CustomerMenu/CustMenuShowReservButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/CustomerMenu/CustMenuShowReservButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/CustomerMenu/CustMenuShowSpacesButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/CustomerMenu/CustMenuShowSpacesButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/MainMenu/MainMenuExitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/MainMenu/MainMenuExitButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/MainMenu/MainMenuLoginAdminButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/MainMenu/MainMenuLoginAdminButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/MainMenu/MainMenuLoginCustButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/MainMenu/MainMenuLoginCustButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/MenuButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/MenuButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/MenuButtonShower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/MenuButtonShower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/MenuShower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/MenuShower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilityServices/CustomClassLoader/CustomClassLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/CustomClassLoader/CustomClassLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilityServices/CustomExceptions/DataFolderNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/CustomExceptions/DataFolderNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilityServices/ListViewers/CustomerListViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/ListViewers/CustomerListViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilityServices/ListViewers/ListViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/ListViewers/ListViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilityServices/ListViewers/ReservationsListViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/ListViewers/ReservationsListViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilityServices/ListViewers/SpaceListViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/ListViewers/SpaceListViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilityServices/TimeOverlapChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/TimeOverlapChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilityServices/UserInputValidators/CharsOrDigitsInputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/UserInputValidators/CharsOrDigitsInputValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilityServices/UserInputValidators/DateInputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/UserInputValidators/DateInputValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilityServices/UserInputValidators/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/UserInputValidators/InputValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilityServices/UserInputValidators/MenuInputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/UserInputValidators/MenuInputValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilityServices/UserInputValidators/PositiveDigitValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/UserInputValidators/PositiveDigitValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilityServices/UserInputValidators/TimeInputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/UserInputValidators/TimeInputValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilityServices/UserInputValidators/ValidationOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/UserInputValidators/ValidationOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CoworkingSpaceReservationApp-1.0-SNAPSHOT.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,26 +55,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ExampleClass.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Maven.CoworkingSpaceReservationApp [compile].executor": "Run",
-    "Maven.CoworkingSpaceReservationApp [install].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "ToolWindow.Debug.ShowToolbar": "false",
-    "git-widget-placeholder": "Lecture__6__Assignment__(MAVEN)",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "F:/Java/Anderes_Training_Projects/Melnikovich_Andersen_Training_Assignments",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.updates"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ExampleClass.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.CoworkingSpaceReservationApp [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.CoworkingSpaceReservationApp [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;ToolWindow.Debug.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Lecture__6__Assignment__(MAVEN)&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Java/Anderes_Training_Projects/Melnikovich_Andersen_Training_Assignments&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Main" />
@@ -316,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741877130049</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="1. GetName methods of Customer and Space class are changed to use Optional.&#10;2. DataLoader and DataDeleter are changes to use optional;&#10;3. MenuShower class changes to use lambdas instead of ForEach.&#10;4. Few typos fixed.">
+      <option name="closed" value="true" />
+      <created>1742227270721</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1742227270721</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
