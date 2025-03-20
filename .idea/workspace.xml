@@ -7,7 +7,7 @@
     <list default="true" id="9226fcc9-2cfe-4348-a43e-35402f31c9cc" name="Changes" comment="1. GetName methods of Customer and Space class are changed to use Optional.&#10;2. DataLoader and DataDeleter are changes to use optional;&#10;3. MenuShower class changes to use lambdas instead of ForEach.&#10;4. Few typos fixed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CoworkingSpaceReservationApp-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/ReservationOperators/ReservationCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/ReservationOperators/ReservationCreator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,26 +55,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ExampleClass.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.CoworkingSpaceReservationApp [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.CoworkingSpaceReservationApp [install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;ToolWindow.Debug.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Lecture__6__Assignment__(MAVEN)&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Java/Anderes_Training_Projects/Melnikovich_Andersen_Training_Assignments&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ExampleClass.executor": "Run",
+    "Application.Main.executor": "Run",
+    "JUnit.CharsOrDigitsInputValidatorTest$WrongInputTests.executor": "Run",
+    "JUnit.CharsOrDigitsInputValidatorTest.executor": "Run",
+    "JUnit.DateInputValidatorTest.executor": "Run",
+    "JUnit.PositiveDigitValidatorTest$intInputTests.executor": "Run",
+    "JUnit.PositiveDigitValidatorTest.executor": "Run",
+    "JUnit.PositiveInputValidatorTest (1).executor": "Run",
+    "JUnit.PositiveInputValidatorTest.executor": "Run",
+    "JUnit.PositiveInputValidatorTest.validate_Test.executor": "Run",
+    "JUnit.TimeInputValidatorTest.executor": "Run",
+    "JUnit.TimeOverlapCheckerTest.executor": "Run",
+    "Maven.CoworkingSpaceReservationApp [compile].executor": "Run",
+    "Maven.CoworkingSpaceReservationApp [install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "ToolWindow.Debug.ShowToolbar": "false",
+    "git-widget-placeholder": "Lecture__7__Assignmnet__(Testing)",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/Java/Anderes_Training_Projects/Melnikovich_Andersen_Training_Assignments",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.updates"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Main" />
@@ -86,14 +96,93 @@
       <recent name="F:\Java\Anderes_Training_Projects\Melnikovich_Andersen_Training_Assignments\src\Main\java" />
       <recent name="F:\Java\Anderes_Training_Projects\Melnikovich_Andersen_Training_Assignments\src\UtilityServices\CustomClassLoader" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="UtilityServices" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="UtilityServices.UserInputValidator" />
       <recent name="UI.Admin" />
       <recent name="UI.DataOperationsDialogBoxes.SpaceOperationDialogBoxes" />
       <recent name="UI.DataOperationsDialogBoxes" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TimeOverlapCheckerTest">
+    <configuration name="DateInputValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Melnikovich_Andersen_Training_Assignments" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UtilityServices.UserInputValidator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UtilityServices.UserInputValidator" />
+      <option name="MAIN_CLASS_NAME" value="UtilityServices.UserInputValidator.DateInputValidatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PositiveDigitValidatorTest$intInputTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Melnikovich_Andersen_Training_Assignments" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UtilityServices.UserInputValidator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UtilityServices.UserInputValidator.PositiveDigitValidatorTest" />
+      <option name="MAIN_CLASS_NAME" value="UtilityServices.UserInputValidator.PositiveDigitValidatorTest$intInputTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PositiveDigitValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Melnikovich_Andersen_Training_Assignments" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UtilityServices.UserInputValidator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UtilityServices.UserInputValidator" />
+      <option name="MAIN_CLASS_NAME" value="UtilityServices.UserInputValidator.PositiveDigitValidatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimeInputValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Melnikovich_Andersen_Training_Assignments" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UtilityServices.UserInputValidator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UtilityServices.UserInputValidator" />
+      <option name="MAIN_CLASS_NAME" value="UtilityServices.UserInputValidator.TimeInputValidatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimeOverlapCheckerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Melnikovich_Andersen_Training_Assignments" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UtilityServices.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UtilityServices" />
+      <option name="MAIN_CLASS_NAME" value="UtilityServices.TimeOverlapCheckerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="CoworkingSpaceReservationApp" />
       <method v="2">
@@ -105,6 +194,15 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TimeOverlapCheckerTest" />
+        <item itemvalue="JUnit.PositiveDigitValidatorTest" />
+        <item itemvalue="JUnit.PositiveDigitValidatorTest$intInputTests" />
+        <item itemvalue="JUnit.DateInputValidatorTest" />
+        <item itemvalue="JUnit.TimeInputValidatorTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -259,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742227270721</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="1. GetName methods of Customer and Space class are changed to use Optional.&#10;2. DataLoader and DataDeleter are changes to use optional;&#10;3. MenuShower class changes to use lambdas instead of ForEach.&#10;4. Few typos fixed.">
+      <option name="closed" value="true" />
+      <created>1742234537489</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1742234537489</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -283,11 +389,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main/java/UtilityServices/UserInputValidators/PositiveDigitValidator.java</url>
-          <line>4</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NumberFormatException" package="java.lang" />
           <option name="timeStamp" value="25" />
@@ -300,6 +401,16 @@
           <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="43" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.12.1/junit-jupiter-api-5.12.1.jar!/org/junit/jupiter/api/AssertEquals.class</url>
+          <line>18</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/UtilityServices/UserInputValidator/TimeInputValidatorTest.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

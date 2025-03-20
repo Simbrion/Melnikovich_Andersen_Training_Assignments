@@ -9,13 +9,8 @@ import java.io.IOException;
 public class ReservationCreator {
     private static int reservIdCount = 1;
 
-
     public void setReservIdCount(int i) {
        reservIdCount = i;
-    }
-
-    public int getIdCount() {
-        return reservIdCount;
     }
 
     public void createReservation(Customer customer) throws IOException {
