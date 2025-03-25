@@ -29,6 +29,12 @@ public class Reservation implements Describable, Serializable {
         this.space = space;
     }
 
+    public void setSpace(String spaceName) {
+        for (Space iteratedSpace : Main.SPACES_DATABASE.getData()){
+            if (iteratedSpace.getName().equals(spaceName)) this.setSpace(iteratedSpace);
+        }
+    }
+
     public Space getSpace() {
         return this.space;
     }
@@ -36,6 +42,14 @@ public class Reservation implements Describable, Serializable {
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
+
+    public void setCustomer(String customerName) {
+        for (Customer iteratedCustomer : Main.CUSTOMERS_DATABASE.getData())
+            if (iteratedCustomer.getName().equals(customerName)) {
+                this.customer = iteratedCustomer;
+            }
+    }
+
 
     public String getCustomerName() {
         return this.customer.getName();

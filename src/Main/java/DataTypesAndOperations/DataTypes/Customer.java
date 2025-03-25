@@ -11,8 +11,7 @@ import java.util.*;
 public class Customer implements Menu, Serializable {
 
     private String name;
-    private List<Reservation> customerReservations = new ArrayList<>();
-    private HashSet<Integer> custMenuOptionNumbers = new HashSet<>();
+    private static final HashSet<Integer> CUST_MENU_OPTION_NUMBERS = new HashSet<>();
 
     public void setName(String name) {
         this.name = name;
@@ -22,12 +21,12 @@ public class Customer implements Menu, Serializable {
        return Optional.ofNullable(this.name).orElse("Unnamed_User");
     }
 
-    public void addReservation(Reservation reservation) {
-        customerReservations.add(reservation);
-    }
-
     public List<Reservation> getReservations() {
-        return customerReservations;
+        List<Reservation> result = new ArrayList<>();
+        for (Reservation reservation : Main.RESERVATIONS_DATABASE.getData()) {
+            if (reservation.getCustomerName().equals(this.name)) result.add(reservation);
+        }
+        return result;
     }
 
     public void getToMenu() throws IOException {
@@ -41,12 +40,12 @@ public class Customer implements Menu, Serializable {
 
     @Override
     public void showMenu() {
-        Main.MENU_SHOWER.showMenu(custMenuOptionNumbers, Main.CUST_MENU_BUTTONS);
+        Main.MENU_SHOWER.showMenu(CUST_MENU_OPTION_NUMBERS, Main.CUST_MENU_BUTTONS);
     }
 
     @Override
     public HashSet<Integer> getMenuOptionNumbers() {
-        return custMenuOptionNumbers;
+        return CUST_MENU_OPTION_NUMBERS;
     }
 
     public boolean equals(Object object) {

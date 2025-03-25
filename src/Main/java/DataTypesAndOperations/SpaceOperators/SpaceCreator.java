@@ -20,7 +20,7 @@ public class SpaceCreator {
             start();
         }
 
-        for (Space space : Main.SPACES) {
+        for (Space space : Main.SPACES_DATABASE.getData()) {
             if (userInput.equalsIgnoreCase(space.getName())) {
                 System.out.println(Config.RED_COLOUR + "Space with this name already exists. Please choose another name." + Config.RESET_COLOUR);
                 newSpaceNameIsOriginal = false;
@@ -31,7 +31,7 @@ public class SpaceCreator {
         if (newSpaceNameIsOriginal && inputIsValid) {
             Space newSpace = new Space();
             newSpace.initialize(userInput);
-            Main.SPACES.add(newSpace);
+            Main.SPACES_DATABASE.addSpace(newSpace);
             System.out.println(Config.GREEN_COLOUR + "A new space has been created!" + Config.RESET_COLOUR);
             newSpace.printDescription();
         }

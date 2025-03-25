@@ -26,6 +26,25 @@ public class Space implements Describable, Serializable {
         this.typeOfSpace = type;
     }
 
+    public void setType(String typeName) {
+       switch (typeName) {
+           case "open_space" : {
+               this.setType(TypeOfSpace.OPEN_SPACE);
+               break;
+           }
+           case "private_room" : {
+               this.setType(TypeOfSpace.PRIVATE_ROOM);
+               break;
+           }
+           case "conference_room" : {
+               this.setType(TypeOfSpace.CONFERENCE_ROOM);
+               break;
+           }
+       }
+
+
+    }
+
     public void initialize(String nameOfNewSpace) throws IOException {
         this.setName(nameOfNewSpace);
         Main.SPACE_TYPE_SELECTOR.selectType(this);
@@ -34,6 +53,10 @@ public class Space implements Describable, Serializable {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public int getPrice() {
+        return this.price;
     }
 
     public void printDescription() {
@@ -46,13 +69,13 @@ public class Space implements Describable, Serializable {
     public String getTypeAsString() {
         switch (this.typeOfSpace) {
             case TypeOfSpace.CONFERENCE_ROOM : {
-                return "conference room";
+                return "conference_room";
             }
             case TypeOfSpace.PRIVATE_ROOM: {
-                return "private room";
+                return "private_room";
             }
             case TypeOfSpace.OPEN_SPACE: {
-                return "open space";
+                return "open_space";
             }
         }
         return null;

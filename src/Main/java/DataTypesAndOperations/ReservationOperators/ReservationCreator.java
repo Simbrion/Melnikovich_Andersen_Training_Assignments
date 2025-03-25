@@ -7,15 +7,10 @@ import MainPackage.*;
 import java.io.IOException;
 
 public class ReservationCreator {
-    private static int reservIdCount = 1;
-
-    public void setReservIdCount(int i) {
-       reservIdCount = i;
-    }
 
     public void createReservation(Customer customer) throws IOException {
 
-        if (Main.SPACES.isEmpty()) {
+        if (Main.SPACES_DATABASE.isEmpty()) {
             System.out.println(Config.NO_EXISTING_SPACES);
         }
 
@@ -27,10 +22,9 @@ public class ReservationCreator {
             if (newReservation.getStartTime() != null) Main.RESERV_END_TIME_SELECTOR.selectEndTime(newReservation);
 
             if (reservationIsReady(newReservation)) {
-                newReservation.setId(reservIdCount++);
+                newReservation.setId(Main.RESERVATIONS_DATABASE.getCurrentIndex() + 1);
                 newReservation.setCustomer(customer);
-                Main.RESERVATIONS.add(newReservation);
-                customer.addReservation(newReservation);
+                Main.RESERVATIONS_DATABASE.addReservation(newReservation);
                 System.out.println(Config.GREEN_COLOUR + "Reservation has been added!" + Config.RESET_COLOUR);
                 newReservation.printDescription();
             } else
