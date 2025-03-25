@@ -2,11 +2,9 @@ package MainPackage;
 
 import DataTypesAndOperations.CustomerOperations.CustomerDeleter;
 import DataTypesAndOperations.CustomerOperations.CustomerLogIn;
-import DataTypesAndOperations.DataTypes.Customer;
-import DataTypesAndOperations.DataTypes.Reservation;
-import DataTypesAndOperations.DataTypes.Space;
-import DataTypesAndOperations.DiskDataOperation.DataLoader;
-import DataTypesAndOperations.DiskDataOperation.DataSaver;
+import DataTypesAndOperations.Databases.CustomersDatabase;
+import DataTypesAndOperations.Databases.DatabaseConnector;
+import DataTypesAndOperations.Databases.ReservationsDatabase;
 import DataTypesAndOperations.SpaceOperators.*;
 
 
@@ -19,12 +17,12 @@ import java.util.HashSet;
 import java.util.List;
 
 import DataTypesAndOperations.ReservationOperators.*;
+import DataTypesAndOperations.Databases.SpacesDatabase;
 import UI.*;
 import UI.AdminMenu.*;
 import UI.CustomerMenu.*;
 import UI.MainMenu.*;
 import UtilityServices.*;
-import DataTypesAndOperations.DiskDataOperation.DataDeleter;
 import UtilityServices.CustomClassLoader.CustomClassLoader;
 import UtilityServices.ListViewers.CustomerListViewer;
 import UtilityServices.ListViewers.ReservationsListViewer;
@@ -47,9 +45,6 @@ public class Main implements Menu {
     public static final MenuButtonShower BUTTON_SHOWER = new MenuButtonShower();
     public static final MenuShower MENU_SHOWER = new MenuShower();
     public static final HashSet<Integer> MAIN_MENU_OPTION_NUMBERS = new HashSet<>();
-    public static final DataSaver DATA_SAVER = new DataSaver();
-    public static final DataLoader DATA_LOADER = new DataLoader();
-    public static final DataDeleter DATA_DELETER = new DataDeleter();
     public static final CustomerDeleter CUSTOMER_DELETER = new CustomerDeleter();
 
     //Admin menu buttons initialization
@@ -104,10 +99,11 @@ public class Main implements Menu {
         MAIN_MENU_BUTTONS.add(MAIN_LOGIN_ADMIN_BUTTON);
     }
 
-    //Memory storages initialization
-    public static final List<Customer> CUSTOMERS = new ArrayList<>();
-    public static final List<Reservation> RESERVATIONS = new ArrayList<>();
-    public static final List<Space> SPACES = new ArrayList<>();
+    //Database connection setup
+    public static final DatabaseConnector DATABASE_CONNECTOR = new DatabaseConnector();
+    public static final CustomersDatabase CUSTOMERS_DATABASE = new CustomersDatabase();
+    public static final SpacesDatabase SPACES_DATABASE = new SpacesDatabase();
+    public static final ReservationsDatabase RESERVATIONS_DATABASE = new ReservationsDatabase();
 
     //List viewers initialization
     public static final SpaceListViewer SPACE_LIST_VIEWER = new SpaceListViewer();
@@ -146,8 +142,6 @@ public class Main implements Menu {
 
         CustomClassLoader classLoader = new CustomClassLoader();
         classLoader.loadClass("ExampleClass");
-
-        DATA_LOADER.loadData();
 
         SESSION.getToMenu();
 

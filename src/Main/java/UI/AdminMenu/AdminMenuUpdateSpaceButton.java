@@ -13,7 +13,7 @@ public class AdminMenuUpdateSpaceButton implements MenuButton {
     @Override
     public void onPush() throws IOException {
 
-        if (Main.SPACES.isEmpty()) {
+        if (Main.SPACES_DATABASE.isEmpty()) {
             System.out.println(Config.NO_EXISTING_SPACES);
             Main.ADMIN.getToMenu();
 

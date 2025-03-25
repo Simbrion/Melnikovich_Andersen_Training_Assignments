@@ -17,7 +17,7 @@ public class ReservationSpaceSelector {
             System.out.println(Config.YELLOW_COLOUR + "Please insert the name of the space to be reserved." + Config.RESET_COLOUR);
             new SpaceListViewer().printList();
             String userInput = Main.READER.readLine();
-            for (Space space : Main.SPACES) {
+            for (Space space : Main.SPACES_DATABASE.getData()) {
                 if (userInput.equalsIgnoreCase(space.getName())) {
                     newReservation.setSpace(space);
                     spaceNameIsOnTheList = true;

@@ -5,12 +5,13 @@ import DataTypesAndOperations.DataTypes.Reservation;
 import MainPackage.*;
 
 import java.io.IOException;
+import java.util.List;
 
 public class ReservationCanceler {
 
     public void cancelReservation(Customer customer) throws IOException {
 
-        if (Main.RESERVATIONS.isEmpty() || customer.getReservations().isEmpty()) {
+        if (Main.RESERVATIONS_DATABASE.isEmpty() || customer.getReservations().isEmpty()) {
             System.out.println(Config.YELLOW_COLOUR + "You have no reservations." + Config.RESET_COLOUR);
             customer.getToMenu();
         }
@@ -32,22 +33,14 @@ public class ReservationCanceler {
 
     private void performDeletion(String userInput, Customer customer) throws IOException {
         boolean foundReservationToDelete = false;
-        for (int i = 0; i < Main.RESERVATIONS.size(); i++) {
-            if ((Integer.parseInt(userInput) == Main.RESERVATIONS.get(i).getId()) && (Main.RESERVATIONS.get(i).getCustomerName().equalsIgnoreCase(customer.getName()))) {
-                Main.RESERVATIONS.remove(Main.RESERVATIONS.get(i));
+        List<Reservation> currentReservationsList = Main.RESERVATIONS_DATABASE.getData();
+        for (int i = 0; i < currentReservationsList.size(); i++) {
+            if ((Integer.parseInt(userInput) == currentReservationsList.get(i).getId()) && (currentReservationsList.get(i).getCustomerName().equalsIgnoreCase(customer.getName()))) {
+                Main.RESERVATIONS_DATABASE.removeReservation(currentReservationsList.get(i));
+                currentReservationsList.remove(currentReservationsList.get(i));
                 System.out.println(Config.GREEN_COLOUR + "Reservation has been successfully cancelled!" + Config.RESET_COLOUR);
                 foundReservationToDelete = true;
                 break;
-            }
-        }
-
-        if (foundReservationToDelete) {
-            for (Reservation reservation : customer.getReservations()) {
-                 if (Integer.parseInt(userInput) == reservation.getId()) {
-                     customer.getReservations().remove(reservation);
-                     Main.DATA_DELETER.deleteReservationData(reservation);
-                     break;
-                 }
             }
         }
 

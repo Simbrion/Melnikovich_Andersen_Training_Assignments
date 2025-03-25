@@ -11,7 +11,6 @@ public class MainMenuExitButton implements MenuButton {
 
     @Override
     public void onPush() throws IOException {
-        Main.DATA_SAVER.saveSessionData();
         System.out.println(Config.EXIT_MESSAGE);
         System.exit(0);
     }
