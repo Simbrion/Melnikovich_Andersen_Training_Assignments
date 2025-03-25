@@ -22,8 +22,8 @@ public class CustomerLogIn {
         }
 
         //Existing customer login
-        if (!Main.CUSTOMERS.isEmpty()) {
-            for (Customer existingCustomer : Main.CUSTOMERS) {
+        if (!Main.CUSTOMERS_DATABASE.isEmpty()) {
+            for (Customer existingCustomer : Main.CUSTOMERS_DATABASE.getData()) {
                 if (existingCustomer.getName().equalsIgnoreCase(userInput)) {
                     customerAlreadyExists = true;
                     System.out.println("Nice to see you again, " + existingCustomer.getName() + '!');
@@ -36,7 +36,7 @@ public class CustomerLogIn {
         if (!customerAlreadyExists && inputIsValid) {
             Customer newCustomer = new Customer();
             newCustomer.setName(userInput);
-            Main.CUSTOMERS.add(newCustomer);
+            Main.CUSTOMERS_DATABASE.addCustomer(newCustomer);
             System.out.println("Welcome, new customer " + newCustomer.getName() + '!');
             newCustomer.getToMenu();
         }

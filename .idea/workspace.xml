@@ -4,10 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9226fcc9-2cfe-4348-a43e-35402f31c9cc" name="Changes" comment="1. GetName methods of Customer and Space class are changed to use Optional.&#10;2. DataLoader and DataDeleter are changes to use optional;&#10;3. MenuShower class changes to use lambdas instead of ForEach.&#10;4. Few typos fixed.">
+    <list default="true" id="9226fcc9-2cfe-4348-a43e-35402f31c9cc" name="Changes" comment="- Tests for utility services added (JUnit, Mockito).&#10;- Minor fixes.">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/CustomerOperations/CustomerDeleter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/CustomerOperations/CustomerDeleter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/CustomerOperations/CustomerLogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/CustomerOperations/CustomerLogIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DataTypes/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DataTypes/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DataTypes/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DataTypes/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DataTypes/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DataTypes/Space.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DiskDataOperation/DataDeleter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DiskDataOperation/DataLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DiskDataOperation/DataSaver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/ReservationOperators/ReservationCanceler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/ReservationOperators/ReservationCanceler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/ReservationOperators/ReservationCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/ReservationOperators/ReservationCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/ReservationOperators/ReservationSpaceSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/ReservationOperators/ReservationSpaceSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/SpaceOperators/SpaceCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/SpaceOperators/SpaceCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/SpaceOperators/SpaceDeleter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/SpaceOperators/SpaceDeleter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/SpaceOperators/SpaceModifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/SpaceOperators/SpaceModifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/MainPackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/MainPackage/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/UI/AdminMenu/AdminMenuExitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/AdminMenu/AdminMenuExitButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/UI/AdminMenu/AdminMenuUpdateSpaceButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/AdminMenu/AdminMenuUpdateSpaceButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/UI/CustomerMenu/CustMenuExitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/CustomerMenu/CustMenuExitButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/UI/MainMenu/MainMenuExitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UI/MainMenu/MainMenuExitButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/UtilityServices/ListViewers/CustomerListViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/ListViewers/CustomerListViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/UtilityServices/ListViewers/ReservationsListViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/ListViewers/ReservationsListViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/UtilityServices/ListViewers/SpaceListViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/ListViewers/SpaceListViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/UtilityServices/TimeOverlapChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/UtilityServices/TimeOverlapChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UtilityServices/TimeOverlapCheckerTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +85,7 @@
     "Application.Main.executor": "Run",
     "JUnit.CharsOrDigitsInputValidatorTest$WrongInputTests.executor": "Run",
     "JUnit.CharsOrDigitsInputValidatorTest.executor": "Run",
-    "JUnit.DateInputValidatorTest.executor": "Run",
+    "JUnit.DateInputValidatorTest.executor": "Debug",
     "JUnit.PositiveDigitValidatorTest$intInputTests.executor": "Run",
     "JUnit.PositiveDigitValidatorTest.executor": "Run",
     "JUnit.PositiveInputValidatorTest (1).executor": "Run",
@@ -75,14 +99,25 @@
     "RunOnceActivity.git.unshallow": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "ToolWindow.Debug.ShowToolbar": "false",
-    "git-widget-placeholder": "Lecture__7__Assignmnet__(Testing)",
+    "git-widget-placeholder": "Lecture__8__(JDBC)",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "F:/Java/Anderes_Training_Projects/Melnikovich_Andersen_Training_Assignments",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.updates"
+    "settings.editor.selected.configurable": "preferences.updates",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -107,7 +142,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TimeOverlapCheckerTest">
+  <component name="RunManager">
     <configuration name="DateInputValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Melnikovich_Andersen_Training_Assignments" />
       <extension name="coverage">
@@ -183,23 +218,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="CoworkingSpaceReservationApp" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="CoworkingSpaceReservationApp" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DateInputValidatorTest" />
         <item itemvalue="JUnit.TimeOverlapCheckerTest" />
         <item itemvalue="JUnit.PositiveDigitValidatorTest" />
         <item itemvalue="JUnit.PositiveDigitValidatorTest$intInputTests" />
-        <item itemvalue="JUnit.DateInputValidatorTest" />
         <item itemvalue="JUnit.TimeInputValidatorTest" />
       </list>
     </recent_temporary>
@@ -212,6 +236,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1740502315359</updated>
+      <workItem from="1742768029336" duration="512000" />
+      <workItem from="1742768643184" duration="852000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -365,8 +391,19 @@
       <option name="project" value="LOCAL" />
       <updated>1742234537489</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="- Tests for utility services added (JUnit, Mockito).&#10;- Minor fixes.">
+      <option name="closed" value="true" />
+      <created>1742473124748</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1742473124748</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
@@ -384,7 +421,8 @@
     <MESSAGE value="GitIgnore adjusted to commit example class file." />
     <MESSAGE value="CustomClassLoader added to the application." />
     <MESSAGE value="1. GetName methods of Customer and Space class are changed to use Optional.&#10;2. DataLoader and DataDeleter are changes to use optional;&#10;3. MenuShower class changes to use lambdas instead of ForEach.&#10;4. Few typos fixed." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. GetName methods of Customer and Space class are changed to use Optional.&#10;2. DataLoader and DataDeleter are changes to use optional;&#10;3. MenuShower class changes to use lambdas instead of ForEach.&#10;4. Few typos fixed." />
+    <MESSAGE value="- Tests for utility services added (JUnit, Mockito).&#10;- Minor fixes." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Tests for utility services added (JUnit, Mockito).&#10;- Minor fixes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -410,6 +448,57 @@
           <url>file://$PROJECT_DIR$/src/test/java/UtilityServices/UserInputValidator/TimeInputValidatorTest.java</url>
           <line>27</line>
           <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/Databases/ReservationsDatabase.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/Databases/DatabaseConnector.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/Databases/SpacesDatabase.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/Databases/Database.java</url>
+          <line>14</line>
+          <properties class="DataTypesAndOperations.Databases.Database" method="isEmpty">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/Databases/SpacesDatabase.java</url>
+          <line>17</line>
+          <properties class="DataTypesAndOperations.Databases.SpacesDatabase" method="getData">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DataTypes/Reservation.java</url>
+          <line>45</line>
+          <properties class="DataTypesAndOperations.DataTypes.Reservation" method="setCustomer">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Main/java/DataTypesAndOperations/DataTypes/Reservation.java</url>
+          <line>41</line>
+          <properties class="DataTypesAndOperations.DataTypes.Reservation" method="setCustomer">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

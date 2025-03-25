@@ -14,7 +14,7 @@ public class SpaceModifier {
             String userInput = Main.READER.readLine();
             boolean spaceIsOnTheList = false;
 
-            for (Space space : Main.SPACES) {
+            for (Space space : Main.SPACES_DATABASE.getData()) {
                 if (userInput.equalsIgnoreCase(space.getName())) {
                     spaceIsOnTheList = true;
                     Main.SPACE_NAME_MODIFIER.start(space);
