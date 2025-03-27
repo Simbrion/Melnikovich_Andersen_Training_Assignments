@@ -27,7 +27,7 @@ public class CustomerLogIn {
                 if (existingCustomer.getName().equalsIgnoreCase(userInput)) {
                     customerAlreadyExists = true;
                     System.out.println("Nice to see you again, " + existingCustomer.getName() + '!');
-                    existingCustomer.getToMenu();
+                    Main.CUSTOMER_MENU.getToMenu(existingCustomer);
                 }
             }
         }
@@ -38,7 +38,7 @@ public class CustomerLogIn {
             newCustomer.setName(userInput);
             Main.CUSTOMERS_DATABASE.addCustomer(newCustomer);
             System.out.println("Welcome, new customer " + newCustomer.getName() + '!');
-            newCustomer.getToMenu();
+            Main.CUSTOMER_MENU.getToMenu(newCustomer);
         }
     }
 }

@@ -16,7 +16,7 @@ public class CustMenuCancelReservButton implements MenuButton {
     @Override
     public void onPush(Customer customer) throws IOException {
         Main.RESERV_CANCELLER.cancelReservation(customer);
-        customer.getToMenu();
+        Main.CUSTOMER_MENU.getToMenu(customer);
     }
 
     @Override

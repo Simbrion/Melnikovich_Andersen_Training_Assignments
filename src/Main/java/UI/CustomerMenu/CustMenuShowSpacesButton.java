@@ -17,7 +17,7 @@ public class CustMenuShowSpacesButton implements MenuButton {
     public void onPush(Customer customer) throws IOException {
 
         Main.SPACE_LIST_VIEWER.printList();
-        customer.getToMenu();
+        Main.CUSTOMER_MENU.getToMenu(customer);
     }
 
     @Override

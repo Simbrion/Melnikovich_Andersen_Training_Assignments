@@ -22,7 +22,6 @@ public class ReservationCreator {
             if (newReservation.getStartTime() != null) Main.RESERV_END_TIME_SELECTOR.selectEndTime(newReservation);
 
             if (reservationIsReady(newReservation)) {
-                newReservation.setId(Main.RESERVATIONS_DATABASE.getCurrentIndex() + 1);
                 newReservation.setCustomer(customer);
                 Main.RESERVATIONS_DATABASE.addReservation(newReservation);
                 System.out.println(Config.GREEN_COLOUR + "Reservation has been added!" + Config.RESET_COLOUR);

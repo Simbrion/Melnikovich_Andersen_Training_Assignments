@@ -6,16 +6,28 @@ import java.util.Objects;
 import java.util.Optional;
 
 import MainPackage.*;
+import jakarta.persistence.*;
 
+
+@Entity
+@Table(name = "space")
 public class Space implements Describable, Serializable {
 
-    private TypeOfSpace typeOfSpace;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    int id;
+
+    @Column(name = "name",length=20, unique=true, nullable = false)
     private String name;
+
+    @Column(name = "type_of_space", nullable = false)
+    private TypeOfSpace typeOfSpace;
+
+    @Column(name = "price", nullable = false)
     private int price;
 
-
     public String getName() {
-        return Optional.ofNullable(this.name).orElse("Unnamed_Space");
+        return this.name;
     }
 
     public void setName(String name) {
@@ -57,6 +69,10 @@ public class Space implements Describable, Serializable {
 
     public int getPrice() {
         return this.price;
+    }
+
+    public int getId() {
+        return this.id;
     }
 
     public void printDescription() {

@@ -23,6 +23,7 @@ hs_err_pid*
 replay_pid*
 
 *Other files
+.class
 .bin
 .md
 .gitattributes
@@ -32,3 +33,4 @@ replay_pid*
 .xml
 /out/
 /Data/
+/target/

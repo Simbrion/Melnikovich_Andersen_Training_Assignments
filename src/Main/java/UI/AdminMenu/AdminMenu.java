@@ -6,13 +6,13 @@ import UI.*;
 import java.io.IOException;
 import java.util.HashSet;
 
-public class Admin implements Menu {
+public class AdminMenu implements Menu {
     private HashSet<Integer> adminMenuButNumbersSet = new HashSet<>();
 
     @Override
     public void getToMenu() throws IOException {
 
-        System.out.println("Administrator, what you would like me to do?");
+        System.out.println("\nAdministrator, what you would like me to do?");
         showMenu();
         String userInput = Main.READER.readLine();
         Main.MENU_INPUT_VALIDATOR.validate(this, userInput);

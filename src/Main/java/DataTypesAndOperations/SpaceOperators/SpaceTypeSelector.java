@@ -17,14 +17,17 @@ public class SpaceTypeSelector {
         switch (userInput) {
             case "1": {
                 space.setType(TypeOfSpace.OPEN_SPACE);
+                if (space.getId() != 0) Main.SPACES_DATABASE.updateSpaceType(space.getId(), TypeOfSpace.OPEN_SPACE);
                 break;
             }
             case "2": {
                 space.setType(TypeOfSpace.PRIVATE_ROOM);
+                if (space.getId() != 0) Main.SPACES_DATABASE.updateSpaceType(space.getId(), TypeOfSpace.PRIVATE_ROOM);
                 break;
             }
             case "3": {
                 space.setType(TypeOfSpace.CONFERENCE_ROOM);
+                if (space.getId() != 0) Main.SPACES_DATABASE.updateSpaceType(space.getId(), TypeOfSpace.CONFERENCE_ROOM);
                 break;
             }
             default: {

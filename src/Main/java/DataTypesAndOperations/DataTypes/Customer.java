@@ -2,23 +2,33 @@ package DataTypesAndOperations.DataTypes;
 
 import MainPackage.*;
 import UI.*;
+import jakarta.persistence.*;
 
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.*;
 
+@Entity
+@Table(name = "customer")
+public class Customer implements Serializable {
 
-public class Customer implements Menu, Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    int id;
 
+    @Column(name = "name",length=20, unique=true, nullable=false)
     private String name;
-    private static final HashSet<Integer> CUST_MENU_OPTION_NUMBERS = new HashSet<>();
+
+    public int getId() {
+        return this.id;
+    }
 
     public void setName(String name) {
         this.name = name;
     }
 
     public String getName() {
-       return Optional.ofNullable(this.name).orElse("Unnamed_User");
+       return this.name;
     }
 
     public List<Reservation> getReservations() {
@@ -27,25 +37,6 @@ public class Customer implements Menu, Serializable {
             if (reservation.getCustomerName().equals(this.name)) result.add(reservation);
         }
         return result;
-    }
-
-    public void getToMenu() throws IOException {
-        System.out.println("What you would like me to do?");
-        showMenu();
-        String userInput = Main.READER.readLine();
-        Main.MENU_INPUT_VALIDATOR.validate(this, userInput);
-        Main.CUST_MENU_BUTTONS.get(Integer.parseInt(userInput)).onPush(this);
-
-    }
-
-    @Override
-    public void showMenu() {
-        Main.MENU_SHOWER.showMenu(CUST_MENU_OPTION_NUMBERS, Main.CUST_MENU_BUTTONS);
-    }
-
-    @Override
-    public HashSet<Integer> getMenuOptionNumbers() {
-        return CUST_MENU_OPTION_NUMBERS;
     }
 
     public boolean equals(Object object) {

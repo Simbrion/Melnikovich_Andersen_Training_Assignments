@@ -13,7 +13,7 @@ public class AdminMenuDeleteCustomerButton implements MenuButton {
     @Override
     public void onPush() throws IOException {
         Main.CUSTOMER_DELETER.start();
-        Main.ADMIN.getToMenu();
+        Main.ADMIN_MENU.getToMenu();
     }
 
     @Override

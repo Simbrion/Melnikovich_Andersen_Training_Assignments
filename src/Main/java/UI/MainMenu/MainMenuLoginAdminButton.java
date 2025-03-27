@@ -11,7 +11,7 @@ public class MainMenuLoginAdminButton implements MenuButton {
 
     @Override
     public void onPush() throws IOException {
-        Main.ADMIN.getToMenu();
+        Main.ADMIN_MENU.getToMenu();
     }
 
     @Override
