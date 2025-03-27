@@ -2,92 +2,66 @@ package DataTypesAndOperations.Databases;
 
 import DataTypesAndOperations.DataTypes.Reservation;
 import MainPackage.Main;
-import java.sql.*;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.Query;
+
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class ReservationsDatabase extends Database {
 
 
     public boolean isEmpty() {
-        String query = "SELECT Count(*) AS result FROM reservations";
-        return super.isEmpty(query);
+        EntityManager entityManager = Main.EM_FACTORY.createEntityManager();
+        Query query = entityManager.createQuery("SELECT COUNT(r) FROM Reservation r");
+        return  super.isEmpty(entityManager, query);
     }
 
     public List<Reservation> getData() {
-
-        String query = "SELECT * FROM reservations";
-
-        try (Connection connection = Main.DATABASE_CONNECTOR.connect();
-             Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery(query);) {
-            ArrayList<Reservation> result = new ArrayList<>();
-
-            while (resultSet.next()) {
-                Reservation reservation = new Reservation();
-                reservation.setId(resultSet.getInt("id"));
-                reservation.setSpace(resultSet.getString("space_name"));
-                reservation.setCustomer(resultSet.getString("customer_name"));
-                reservation.setDate(resultSet.getDate("date").toLocalDate());
-                reservation.setStartTime(resultSet.getTime("start_time").toLocalTime());
-                reservation.setEndTime(resultSet.getTime("end_time").toLocalTime());
-                result.add(reservation);
-            }
-            return result;
+        EntityManager entityManager = Main.EM_FACTORY.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        Query query = entityManager.createQuery("SELECT r FROM Reservation r");
+        List<Reservation> reservationsList = new ArrayList<>();
+        try {
+            transaction.begin();
+            reservationsList = query.getResultList();
+            transaction.commit();
         }
-        catch (SQLException e) {
-            System.out.println("getReservations method in ReservationsDatabase caught SQL exception!");
+        catch (Exception e) {
+            System.out.println("getData method of ReservationsDatabase class caught exception!");
             e.printStackTrace();
+            transaction.rollback();
         }
-        return Collections.emptyList();
+        finally {
+            entityManager.close();
+        }
+        return reservationsList;
     }
 
     public void removeReservation (Reservation reservation)  {
-
-        String query = "DELETE FROM reservations WHERE id = ?";
-
-        try (PreparedStatement preparedStatement = Main.DATABASE_CONNECTOR.connect().prepareStatement(query)) {
-            preparedStatement.setInt(1, reservation.getId());
-            preparedStatement.executeUpdate();
-        }
-        catch (SQLException e) {
-            System.out.println("removeReservation method in ReservationsDatabase caught SQL exception!");
+        EntityManager entityManager = Main.EM_FACTORY.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        String stringQuery = "DELETE FROM Reservation r WHERE r.id = :id";
+        Query query = entityManager.createQuery(stringQuery);
+        query.setParameter("id", reservation.getId());
+        try {
+            transaction.begin();
+            query.executeUpdate();
+            transaction.commit();
+        } catch (Exception e) {
+            System.out.println("removeCustomer method of ReservationsDatabase class caught exception!");
             e.printStackTrace();
+            transaction.rollback();
+        }
+        finally {
+            entityManager.close();
         }
     }
 
     public void addReservation(Reservation reservation) {
-
-        String query = "INSERT INTO reservations (customer_name, space_name, date, start_time, end_time) VALUES (?, ?, ?, ?, ?)";
-
-        try (PreparedStatement preparedStatement = Main.DATABASE_CONNECTOR.connect().prepareStatement(query)) {
-            preparedStatement.setString(1, reservation.getCustomerName());
-            preparedStatement.setString(2, reservation.getSpace().getName());
-            preparedStatement.setDate(3, Date.valueOf(reservation.getDate()));
-            preparedStatement.setTime(4, Time.valueOf(reservation.getStartTime()));
-            preparedStatement.setTime(5, Time.valueOf(reservation.getEndTime()));
-            preparedStatement.executeUpdate();
-        }
-        catch (SQLException e) {
-            System.out.println("addReservation method in reservationsDatabase caught SQL exception!");
-            e.printStackTrace();
-        }
+        super.addEntity(reservation);
     }
 
-    public int getCurrentIndex() {
-        String query = "SELECT MAX(id) FROM reservations";
-
-        try (Connection connection = Main.DATABASE_CONNECTOR.connect();
-             Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery(query);) {
-             resultSet.next();
-             return resultSet.getInt("MAX(id)");
-        } catch (SQLException e) {
-            System.out.println("getCurrentIndex method in ReservationsDatabase caught SQL exception!");
-            e.printStackTrace();
-        }
-        return 0;
-    }
 
 }

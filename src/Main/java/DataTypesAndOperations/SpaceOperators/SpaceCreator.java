@@ -24,7 +24,7 @@ public class SpaceCreator {
             if (userInput.equalsIgnoreCase(space.getName())) {
                 System.out.println(Config.RED_COLOUR + "Space with this name already exists. Please choose another name." + Config.RESET_COLOUR);
                 newSpaceNameIsOriginal = false;
-                Main.ADMIN.getToMenu();
+                Main.ADMIN_MENU.getToMenu();
             }
         }
 

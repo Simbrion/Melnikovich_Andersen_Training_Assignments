@@ -12,7 +12,7 @@ public class AdminMenuCreateSpaceButton implements MenuButton {
     @Override
     public void onPush() throws IOException {
         Main.SPACE_CREATOR.start();
-        Main.ADMIN.getToMenu();
+        Main.ADMIN_MENU.getToMenu();
     }
 
     @Override

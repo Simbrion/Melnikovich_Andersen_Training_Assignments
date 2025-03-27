@@ -13,7 +13,7 @@ public class ReservationCanceler {
 
         if (Main.RESERVATIONS_DATABASE.isEmpty() || customer.getReservations().isEmpty()) {
             System.out.println(Config.YELLOW_COLOUR + "You have no reservations." + Config.RESET_COLOUR);
-            customer.getToMenu();
+            Main.CUSTOMER_MENU.getToMenu(customer);
         }
 
         try {
@@ -24,7 +24,7 @@ public class ReservationCanceler {
                 performDeletion(userInput, customer);
             } else {
                 System.out.println(Config.WRONG_INPUT_MESSAGE);
-                customer.getToMenu();
+                Main.CUSTOMER_MENU.getToMenu(customer);
             }
         } catch (IOException exception) {
             System.out.println(Config.WRONG_INPUT_EXCEPTION);
@@ -35,7 +35,7 @@ public class ReservationCanceler {
         boolean foundReservationToDelete = false;
         List<Reservation> currentReservationsList = Main.RESERVATIONS_DATABASE.getData();
         for (int i = 0; i < currentReservationsList.size(); i++) {
-            if ((Integer.parseInt(userInput) == currentReservationsList.get(i).getId()) && (currentReservationsList.get(i).getCustomerName().equalsIgnoreCase(customer.getName()))) {
+            if ((Integer.parseInt(userInput) == currentReservationsList.get(i).getId()) && (currentReservationsList.get(i).getId() == customer.getId())) {
                 Main.RESERVATIONS_DATABASE.removeReservation(currentReservationsList.get(i));
                 currentReservationsList.remove(currentReservationsList.get(i));
                 System.out.println(Config.GREEN_COLOUR + "Reservation has been successfully cancelled!" + Config.RESET_COLOUR);
@@ -46,9 +46,9 @@ public class ReservationCanceler {
 
         if (!foundReservationToDelete) {
             System.out.println(Config.RED_COLOUR + "Can't find your reservation ith such ID." + Config.RESET_COLOUR);
-            customer.getToMenu();
+            Main.CUSTOMER_MENU.getToMenu(customer);
         }
-        customer.getToMenu();
+        Main.CUSTOMER_MENU.getToMenu(customer);
     }
 }
 

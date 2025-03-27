@@ -13,7 +13,7 @@ public class AdminMenuShowReservationsButton implements MenuButton {
     @Override
     public void onPush() throws IOException {
         Main.RESERV_LIST_VIEWER.printList();
-        Main.ADMIN.getToMenu();
+        Main.ADMIN_MENU.getToMenu();
     }
 
     @Override

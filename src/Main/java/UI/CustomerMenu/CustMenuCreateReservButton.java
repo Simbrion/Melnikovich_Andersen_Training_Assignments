@@ -16,7 +16,7 @@ public class CustMenuCreateReservButton implements MenuButton {
     @Override
     public void onPush(Customer customer) throws IOException {
         Main.RESERV_CREATOR.createReservation(customer);
-        customer.getToMenu();
+        Main.CUSTOMER_MENU.getToMenu(customer);
     }
 
     @Override

@@ -3,7 +3,6 @@ package MainPackage;
 import DataTypesAndOperations.CustomerOperations.CustomerDeleter;
 import DataTypesAndOperations.CustomerOperations.CustomerLogIn;
 import DataTypesAndOperations.Databases.CustomersDatabase;
-import DataTypesAndOperations.Databases.DatabaseConnector;
 import DataTypesAndOperations.Databases.ReservationsDatabase;
 import DataTypesAndOperations.SpaceOperators.*;
 
@@ -28,12 +27,15 @@ import UtilityServices.ListViewers.CustomerListViewer;
 import UtilityServices.ListViewers.ReservationsListViewer;
 import UtilityServices.ListViewers.SpaceListViewer;
 import UtilityServices.UserInputValidators.*;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 
 public class Main implements Menu {
 
     //System & utility modules initialization
     public static final Main SESSION = new Main();
-    public static final Admin ADMIN = new Admin();
+    public static final AdminMenu ADMIN_MENU = new AdminMenu();
+    public static final CustomerMenu CUSTOMER_MENU = new CustomerMenu();
     public static final CustomerLogIn LOGIN = new CustomerLogIn();
     public static final InputValidator INPUT_VALIDATOR = new InputValidator();
     public static final CharsOrDigitsInputValidator CHARS_OR_DIGITS_INPUT_VALIDATOR = new CharsOrDigitsInputValidator();
@@ -100,7 +102,8 @@ public class Main implements Menu {
     }
 
     //Database connection setup
-    public static final DatabaseConnector DATABASE_CONNECTOR = new DatabaseConnector();
+    public static final EntityManagerFactory EM_FACTORY = Persistence.createEntityManagerFactory("unitname");
+
     public static final CustomersDatabase CUSTOMERS_DATABASE = new CustomersDatabase();
     public static final SpacesDatabase SPACES_DATABASE = new SpacesDatabase();
     public static final ReservationsDatabase RESERVATIONS_DATABASE = new ReservationsDatabase();
@@ -150,7 +153,7 @@ public class Main implements Menu {
     @Override
     public void getToMenu() throws IOException {
 
-        System.out.println(Config.GREEN_COLOUR + "Welcome to Coworking Space Reservation App by Artem Melnikovich!" + Config.RESET_COLOUR);
+        System.out.println(Config.GREEN_COLOUR + "\nWelcome to Coworking Space Reservation App by Artem Melnikovich!" + Config.RESET_COLOUR);
         showMenu();
         String userInput = Main.READER.readLine();
         MENU_INPUT_VALIDATOR.validate(this, userInput);

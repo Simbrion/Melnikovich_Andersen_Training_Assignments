@@ -17,7 +17,7 @@ public class CustMenuShowReservButton implements MenuButton {
     @Override
     public void onPush(Customer customer) throws IOException {
         Main.RESERV_LIST_VIEWER.printCustomerReservationsList(customer);
-        customer.getToMenu();
+        Main.CUSTOMER_MENU.getToMenu(customer);
     }
 
     @Override

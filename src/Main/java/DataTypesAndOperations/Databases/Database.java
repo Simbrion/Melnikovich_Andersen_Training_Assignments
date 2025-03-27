@@ -1,30 +1,46 @@
 package DataTypesAndOperations.Databases;
 
 import MainPackage.Main;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.Query;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.List;
 
 abstract class Database {
 
-   abstract boolean isEmpty();
-
-   boolean isEmpty (String query) {
-       try (Connection connection = Main.DATABASE_CONNECTOR.connect();
-       Statement statement = connection.createStatement();
-       ResultSet resultSet = statement.executeQuery(query);) {
-           resultSet.next();
-           return resultSet.getInt("result") == -0;
-
-       } catch (SQLException e) {
+   boolean isEmpty (EntityManager entityManager, Query query) {
+       try {
+           Long result = (Long) query.getSingleResult();
+           return result == 0;
+       }
+       catch (Exception e) {
+           System.out.println("isEmpty method of Database class caught exception!");
            e.printStackTrace();
        }
-       return false;
+       finally {
+           entityManager.close();
+       }
+       return true;
     }
 
     abstract List<?> getData();
+
+    public <T> void addEntity(T entity) {
+        EntityManager entityManager = Main.EM_FACTORY.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            transaction.begin();
+            entityManager.persist(entity);
+            transaction.commit();
+        } catch (Exception e) {
+            System.out.println("addEntity method of Database class caught exception!");
+            e.printStackTrace();
+            transaction.rollback();
+        }
+        finally {
+            entityManager.close();
+        }
+    }
 
 }

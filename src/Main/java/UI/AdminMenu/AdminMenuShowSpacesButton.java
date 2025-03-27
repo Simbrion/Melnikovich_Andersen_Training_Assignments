@@ -13,7 +13,7 @@ public class AdminMenuShowSpacesButton implements MenuButton {
     @Override
     public void onPush() throws IOException {
         Main.SPACE_LIST_VIEWER.printList();
-        Main.ADMIN.getToMenu();
+        Main.ADMIN_MENU.getToMenu();
     }
 
     @Override

@@ -13,7 +13,7 @@ public class AdminMenuShowCustomersButton implements MenuButton {
     @Override
     public void onPush() throws IOException {
         Main.CUSTOMER_LIST_VIEWER.printList();
-        Main.ADMIN.getToMenu();
+        Main.ADMIN_MENU.getToMenu();
     }
 
     @Override

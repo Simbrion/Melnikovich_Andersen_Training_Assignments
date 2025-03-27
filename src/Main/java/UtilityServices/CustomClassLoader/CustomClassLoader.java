@@ -16,7 +16,7 @@ public class CustomClassLoader extends ClassLoader {
             try {
                 return super.loadClass(name, false);
             } catch (ClassNotFoundException e) {
-                System.out.println("Class not found by standard ClassLoader.");
+                System.out.println(Config.YELLOW_COLOUR + "Class not found by standard ClassLoader." + Config.RESET_COLOUR);
                 return customLoadClass(name);
             }
         }

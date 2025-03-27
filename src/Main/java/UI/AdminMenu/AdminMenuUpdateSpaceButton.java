@@ -15,12 +15,12 @@ public class AdminMenuUpdateSpaceButton implements MenuButton {
 
         if (Main.SPACES_DATABASE.isEmpty()) {
             System.out.println(Config.NO_EXISTING_SPACES);
-            Main.ADMIN.getToMenu();
+            Main.ADMIN_MENU.getToMenu();
 
         }
         else {
             Main.SPACE_MODIFIER.start();
-            Main.ADMIN.getToMenu();
+            Main.ADMIN_MENU.getToMenu();
         }
 
     }

@@ -1,25 +1,39 @@
 package DataTypesAndOperations.DataTypes;
 
 import MainPackage.*;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Objects;
 
+
+@Entity
+@Table(name = "reservation")
 public class Reservation implements Describable, Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @ManyToOne
+    @JoinColumn(name = "space_name", nullable = false)
     private Space space;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_name", nullable = false)
     private Customer customer;
+
+    @Column(name = "date", nullable = false)
     private LocalDate date;
+
+    @Column(name = "start_time", nullable = false)
     private LocalTime startTime;
+
+    @Column(name = "end_time", nullable = false)
     private LocalTime endTime;
 
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public int getId() {
         return this.id;
